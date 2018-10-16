@@ -30,14 +30,14 @@
 - [hostname](#hostname)
 - [last](#last)
 
-#pwd
+# pwd
 The `pwd` command stands for `Present Working Directory`. It shows what directory you are in. It gives us the absolute path, which means the path that starts from the root (`/`).
 
 ```console
 $ pwd
 ```
 
-#ls
+# ls
  The command `ls` stands for `List`. It shows files in the directory you are in. You can see all the hidden files by using the option “-a”.
  You can check other options [here](https://www.rapidtables.com/code/linux/ls.html)
 
@@ -45,21 +45,21 @@ $ pwd
 $ ls [options] [file|dir]
 ```
 
-#cd
+# cd
  The command `cd` stands for `Change Directory`. You can go to a different directory with this command.
 
 ```console
 $ cd [options(s)] [directory]
 ```
 
-#cp
+# cp
  The command `cp` stands for `Copy`. It copies `sourcefile` to `targetfile`.
 
 ```console
 $ cp [option(s)] sourcefile targetfile
 ```
 
-#mkdir & rmdir
+# mkdir & rmdir
  The command `mkdir`  and `rmdir` stands for `Make Directory` and `Remove Directory` respectively. Use the `mkdir` command to create a folder or a directory and use `rmdir` to delete a folder or a directory.
 
 ```console
@@ -67,14 +67,14 @@ $ mkdir [option(s)] directoryname
 $ rmdir [option(s)] directoryname
 ```
 
-#rm
+# rm
 Removes the specified files from the file system. Directories are not removed by rm unless the option `-r` is used.
 
 ```console
 rm [option(s)] file(s)
 ```
 
-#mv
+# mv
 The `mv` command moves, or renames, files and directories on your filesystem.
 
 ```console
@@ -85,35 +85,35 @@ $ mv [options] [-T] source destination
 $ mv [options] source [source2 ...] destination
 ```
 
-#chown
+# chown
  The `chown` keyword stands for `Change Owner`. It transfers the ownership of a file to the user with the specified username.
 
 ```console
 $ chown [option(s)] username.group file(s)
 ```
 
-#chgrp
+# chgrp
 The `chgrp` command stands for `Change Group`. It transfers the group ownership of a given file to the group with the specified group name. The file owner can only change group ownership if a member of both the existing and the new group.
 
 ```console
 $ chgrp [option(s)] groupname file(s)
 ```
 
-#chmod
+# chmod
  The `chmod` command stands for `Change Mode`. It changes the access permissions.
 
 ```console
 $ chmod [options] mode file(s)
 ```
 
-#find
+# find
  The`find` command allows you to search for a file in a given directory. The first argument specifies the directory in which to start the search.
 
 ```console
 $ find [option(s)]
 ```
 
-#grep
+# grep
  The `grep` command is used to search text. It searches the given file for lines containing a match to the given strings or words.
 
 ```console
@@ -121,21 +121,21 @@ $ grep 'word' [filename]
 ```
  The `grep` keyword stands for `Global regular expression print`.
 
-#cat
+# cat
  The `cat` command displays the contents of a file, printing the entire contents to the screen without interruption.
 
 ```console
 $ cat [option(s)] file(s)
 ```
 
-#touch
+# touch
   The `touch` command is used to create a file.
 
 ```console
 $ touch file
 ```
 
-#man & --help
+# man & --help
 The `man` command allows admins to format and display the user manual that's built into Linux distributions, which documents commands and other system aspects.
 
 ```console
@@ -143,53 +143,53 @@ $ man [command]
 $ [command] --help
 ```
 
-#echo
+# echo
 The `echo` command displays text.
 
 ```console
 $ echo [option(s)] [string(s)]
 ```
 
-#sudo
+# sudo
  The keyword `sudo` stands for `SuperUser Do`. If you want any command to be done with administrative or root privileges, you can use the `sudo` command.
 
 ```console
 $ sudo [command]
 ```
 
-#df
+# df
 The `df` keyword stands for `Disk Free`. This command is used to check disk space usage on a linux system. The most common usage is like below, used along with the `-h` flag.
 
 ```console
 $ df -h
 ```
 
-#du
+# du
  The `du` keyword stands for `Disk Usage`. It shows the disk usage summary of the directory you are in.
 
 ```console
 $ du [directory]
 ```
 
-#history
+# history
  The `history` command prints a list of previously typed commands.
 
 ```console
 $ history
 ```
-#clear
+# clear
  This command clears all the clutter on the terminal and gives you a clean window to work on.
 
 ```console
 $clear
 ```
-#env
+# env
  It prints the variables of the current environment. It can be used to print a list of the current environment variables or to run another program in a custom environment without modifying the current one.
 
 ```console
 $ env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]
 ```
-#hostname
+# hostname
 It shows or sets the system's host name.
 
 ```console
@@ -200,4 +200,24 @@ $ hostname
 
 ```console
 $ last
+```
+
+# ping
+ The `ping` command stands for  `Packet INternet Groper`.  It lets you check whether or not a remote host is alive and responding.
+ [More info about `ping` command](https://www.sanfoundry.com/10-ping-command-usage-examples-linux/)
+
+```console
+$ ping [OPTIONS] destination(IP/DN)
+```
+# nslookup
+ The `nslookup` command stands for `name server lookup`. It  translates a domain name to an IP address (or vice versa).
+ 
+ ```console
+ $ nslookup [OPTIONS] [IP/DN]
+ ```
+# traceroute
+The `traceroute` command shows the journey that a packet of information undertakes from its source to its destination.
+
+```console
+$ traceroute [OPTIONS] destination(IP/DN)
 ```
