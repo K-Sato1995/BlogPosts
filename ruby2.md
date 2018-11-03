@@ -1,16 +1,16 @@
-#How to create your own gem
+# How to create your own gem
 
-#Introduction
+# Introduction
  In this post, I am going to demonstrate how to create and publish your own gem.  I'll create and publish a very simple gem called `spell-generator` and I'll install and use it in my other ruby program.
 
-#Table of contents
+# Table of contents
 1. [Create your first gem](#create-your-first-gem)
 2. [What does a gem consist of?](#what-does-a-gem-consist-of)
 3. [Publish your gem](#publish-your-gem)
 4. [How to use your gem](#how-to-use-your-gem)
 5. [More Resources](#more-resources)
 
-#Create your first gem
+# Create your first gem
  You can generate foundations of your gem by running the command below. It will generate basic files and directories that you need to start developing your gem. It is sort of like running `rails new` command to create a RoR application.
 
 ```console
@@ -42,24 +42,24 @@ Initializing git repo in /Users/katsuki/Desktop/Ruby/spell_generator
 Gem 'spell_generator' was successfully created. For more information on making a RubyGem visit https://bundler.io/guides/creating_gem.html
 ```
 
-###Naming a gem
+### Naming a gem
  The name of a gem is not just a random collection of letters. There is a strict guideline to follow when you name a gem.
 
 - every dash(`-`) represents a structure (folder, module) immersion
 - every underscore(`_`) represents a joining in the class name
 
-#What does a gem consist of?
+# What does a gem consist of?
  Let's briefly go through directories and files that were created by `bundle gem` command.
 
 - `lib` directory: Code for your gem is placed within this directory.
 - `spec` directory: You can write test code for your gem within this directory.
 - `gemspec`:  The information about the gem is listed here. For instance, information like what’s in the gem, who made it, and the version of the gem.
 
-#Let's write some code in your gem
- As I mentioned [above](#what-does-a-gem-consist-of), code for your gem is placed within `lib`. It is the convention to have one Ruby file with the same name as your gem under `lib` since that file gets loaded when `require your_gem` is run.  That file is in charge of setting up your gem's code and API. (If you run `bundle gem` command, this file with the same name as the gem's name will be automatically generated.)
+# Let's write some code in your gem
+ As I mentioned [above](# what-does-a-gem-consist-of), code for your gem is placed within `lib`. It is the convention to have one Ruby file with the same name as your gem under `lib` since that file gets loaded when `require your_gem` is run.  That file is in charge of setting up your gem's code and API. (If you run `bundle gem` command, this file with the same name as the gem's name will be automatically generated.)
 
 ```ruby
-#spell_generator/lib/spell_generator.rb
+# spell_generator/lib/spell_generator.rb
 
 require_relative "spell_generator/version.rb"
 
@@ -68,11 +68,11 @@ module SpellGenerator
   SPELL_SET2 = %w(punch kick attack blow smash strike smack cut poke stab)
   class Generator
     def self.generate
-      "#{SPELL_SET1[rand(0..9)]} #{SPELL_SET2[rand(0..9)]}"
+      "# {SPELL_SET1[rand(0..9)]} # {SPELL_SET2[rand(0..9)]}"
     end
 
     def generate
-      "#{SPELL_SET1[rand(0..9)]} #{SPELL_SET2[rand(0..9)]}"
+      "# {SPELL_SET1[rand(0..9)]} # {SPELL_SET2[rand(0..9)]}"
     end
   end
 end
@@ -88,7 +88,7 @@ end
 ```
 
 ```ruby
-#spell_generator/lib/spell_generator.rb
+# spell_generator/lib/spell_generator.rb
 
 require_relative "spell_generator/version.rb"
 require_relative "spell_generator/generator.rb"
@@ -98,29 +98,29 @@ end
 ```
 
 ```ruby
-#spell_generator/lib/spell_generotor/spells.rb
+# spell_generator/lib/spell_generotor/spells.rb
 
 SPELL_SET1 = %w(accurate sufficient ugly useful immediate entire healthy hot efficient dramatic)
 SPELL_SET2 = %w(punch kick attack blow smash strike smack cut poke stab)
 ```
 
 ```ruby
-#spell_generator/lib/spell_generotor/generator.rb
+# spell_generator/lib/spell_generotor/generator.rb
 
 require_relative 'spells'
 
 class SpellGenerator::Generator
   def self.generate
-    "#{SPELL_SET1[rand(0..9)]} #{SPELL_SET2[rand(0..9)]}"
+    "# {SPELL_SET1[rand(0..9)]} # {SPELL_SET2[rand(0..9)]}"
   end
 
   def generate
-    "#{SPELL_SET1[rand(0..9)]} #{SPELL_SET2[rand(0..9)]}"
+    "# {SPELL_SET1[rand(0..9)]} # {SPELL_SET2[rand(0..9)]}"
   end
 end
 ```
 
-#Publish your gem
+# Publish your gem
  You have to modify `spec.summary`, `spec.description`, `spec.homepage` and `spec.respond_to?` of your `gemspec` file before you publish your gem. You have to replace the original texts with your own. Your `gemspec` would look something like this after replacing them.
 
 ```ruby
@@ -134,8 +134,8 @@ end
   spec.homepage      = "https://github.com/K-Sato1995/hola_sato/blob/master/spell_generator.gemspec"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  #  Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  #  to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
    spec.metadata["allowed_push_host"] = 'https://rubygems.org'
   else
@@ -158,7 +158,7 @@ $ rake build
 $ rake release
 ```
 
-#How to use your gem
+# How to use your gem
  It is really easy to use your gem once your gem in up and running on github. If you want to use your gem on your rails application, you can add the gem to your `gemfile` and run `bundle install`.
  If you want to use your gem in another ruby file, install the gem on your console and add the lines below in your file.
 
@@ -185,11 +185,11 @@ end
 
 ins = Klass.new
 
-p ins.generate #=> "dramatic smack"
-p Klass.generate #=> "immediate cut"
+p ins.generate # => "dramatic smack"
+p Klass.generate # => "immediate cut"
 ```
 
-#More Resources
+# More Resources
 [How to create a Ruby gem with Bundler](https://bundler.io/v1.16/guides/creating_gem.html)
 [RubyGems.org MAKE YOUR OWN GEM](https://guides.rubygems.org/make-your-own-gem/)
 [Creating a GEM - a step by step tutorial](https://www.netguru.co/blog/creating-a-gem-a-step-by-step-tutorial)

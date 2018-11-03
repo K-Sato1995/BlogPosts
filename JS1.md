@@ -29,7 +29,7 @@ console.log(name) //=> Mike
 let name = 'Nick' //=> SyntaxError: redeclaration of let name
 ```
 
-###Const
+### Const
  Variables declared with `const` can not be redeclared. And you can not reassingn a new value.
 
 ```javascript
@@ -118,7 +118,7 @@ const greeting=(name)=> {
 greeting('Mike') //=> Hello Mike
 ```
 
-#Default parameters
+# Default parameters
  You can assign the default value to an argument.
 
 ```javascript

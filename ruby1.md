@@ -1,13 +1,13 @@
-#Ruby Getters and Setters
+# Ruby Getters and Setters
 
-#Table of contents
+# Table of contents
 
 1. [What is a getter method](#what-is-a-getter-method)
 - [What is a setter method](#what-is-a-setter-method)
 - [What are accessors?](#what-are-accessors)
 - [References](#references)
 
-#What is a getter method?
+# What is a getter method?
  __A getter method__ is a method that ==gets== a value of an instance variable.
  Without a getter method, you can not retrieve a value of an instance variable outside the class the instance variable is instantiated from.
 
@@ -21,7 +21,7 @@ class Movie
 end
 
 obj1 = Movie.new('Forrest Gump')
-p obj1.name #=> undefined method `name' for #<Movie:0x007fecd08cb288 @name="Forrest Gump"> (NoMethodError)
+p obj1.name # => undefined method `name' for # <Movie:0x007fecd08cb288 @name="Forrest Gump"> (NoMethodError)
 ```
  As you can see,  the value of  `obj1` (`name`) can not be retrieved outside `Movie` class. if you try to retrive a value of an instance variable outside its class without a getter method, Ruby raises [No Mothod Error](http://ruby-doc.org/core-2.5.0/NoMethodError.html).
 
@@ -40,10 +40,10 @@ p obj1.name #=> undefined method `name' for #<Movie:0x007fecd08cb288 @name="Forr
 end
 
 obj1 = Movie.new('Forrest Gump')
-p obj1.name #=> "Forrest Gump"
+p obj1.name # => "Forrest Gump"
 ```
 
-#What is a setter method?
+# What is a setter method?
  __A setter__ is a method that ==sets== a value of an instance variable.
  Without a setter method, you can not assign a value to an instance variable outside its class.
  if you try to set a value of an instance variable outside its class, Ruby raises  [No Method Error](http://ruby-doc.org/core-2.5.0/NoMethodError.html) just like it does when you try to retrieve a value of an instance variable outside its class without a getter method.
@@ -54,14 +54,14 @@ class Movie
     @name = name
   end
 
-  def name #getter method
+  def name # getter method
     @name
   end
 end
 
 obj1 = Movie.new('Forrest Gump')
-p obj1.name #=> "Forrest Gump"
-obj1.name = 'Fight Club' #=> undefined method `name=' for #<Movie:0x007f9937053368 @name="Forrest Gump"> (NoMethodError)
+p obj1.name # => "Forrest Gump"
+obj1.name = 'Fight Club' # => undefined method `name=' for # <Movie:0x007f9937053368 @name="Forrest Gump"> (NoMethodError)
 ```
  Defining a setter method inside a class makes it possible to set a value of an instance variable outside the class.
  You can define a setter method like the code below.
@@ -72,23 +72,23 @@ obj1.name = 'Fight Club' #=> undefined method `name=' for #<Movie:0x007f99370533
     @name = name
   end
 
-  def name #getter method
+  def name # getter method
     @name
   end
 
-  def name=(name) #setter method
+  def name=(name) # setter method
     @name = name
   end
 end
 
 obj1 = Movie.new('Forrest Gump')
-p obj1.name #=> "Forrest Gump"
+p obj1.name # => "Forrest Gump"
 obj1.name = 'Fight Club'
-p obj1.name #=> "Fight Club"
+p obj1.name # => "Fight Club"
 ```
 By using `name=`, you can now assign a new value `Fight Club` to `obj1`.
 
-#What are accessors?
+# What are accessors?
  `Accessors` are a way to create getter and setter methods without explicitly defining them in a class.
  There are three types fo accessors in Ruby.
 
@@ -109,8 +109,8 @@ class Movie
   end
 end
 obj1 = Movie.new('Forrest Gump', 1994)
-p obj1.name #=> Forrest Gump
-p obj1.year #=> 1994
+p obj1.name # => Forrest Gump
+p obj1.year # => 1994
 ```
 
  Second, let's see how `attr_writer` works!
@@ -129,8 +129,8 @@ end
 obj1 = Movie.new('Forrest Gump', 1994)
 obj1.name = 'Fight Club'
 obj1.year = 1999
-p obj1.name #=> "Fight Club"
-p obj1.year #=> 1999
+p obj1.name # => "Fight Club"
+p obj1.year # => 1999
 ```
  Last but certainly not least, `attr_accessor` does what `attr_reader` and `attr_writer` do with just one line of code! It will automatically generate a getter and setter mehod for each given attribute.
 
@@ -146,12 +146,11 @@ end
 obj1 = Movie.new('Forrest Gump', 1994)
 obj1.name = 'Fight Club'
 obj1.year = 1999
-p obj1.name #=> "Fight Club"
-p obj1.year #=> 1999
+p obj1.name # => "Fight Club"
+p obj1.year # => 1999
 ```
 
-#References
+# References
 [How getter/setter methods work in Ruby](https://medium.com/@rondwalker22/how-getter-setter-methods-work-in-ruby-c5f5da07f99)
-[What is attr_accessor in Ruby?]
-(https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
+[What is attr_accessor in Ruby?](https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
 [rubylearning.com](http://rubylearning.com/satishtalim/ruby_syntactic_sugar.html)

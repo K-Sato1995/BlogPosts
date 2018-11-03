@@ -1,6 +1,6 @@
-#Rspec Basics ①
+# Rspec Basics ①
 
-#Table of contents
+# Table of contents
 
 1. [What is Rspec?](#what-is-rspec)
 - [How to install Rspec on your RoR applications?](#how-to-install-rspec-on-your-ror-applications)
@@ -19,10 +19,10 @@
  - [Expect error](#expect-error)
  - [Respond_to matchers](#respond_to-matchers)
 
-#What is Rspec?
+# What is Rspec?
 RSpec is a Behaviour-Driven Development tool for Ruby programmers. `BDD` is an approach to software development that combines Test-Driven Development, Domain Driven Design, and Acceptance Test-Driven Planning.
 
-#How to install Rspec on your RoR applications?
+# How to install Rspec on your RoR applications?
  You have to add `rspec-rails` to both the `:development` and `:test` groups in the Gemfile.
 
 ```ruby
@@ -59,13 +59,13 @@ By default, the command above will run all ` _spec.rb` files in the spec directo
 You can run only a subset of these specs by specifying the file path like the example below.
 
 ```console
-# Run only model specs
+#  Run only model specs
 $ bundle exec rspec spec/models
 
-# Run only specs for PostController
+#  Run only specs for PostController
 $ bundle exec rspec spec/controllers/posts_controller_spec.rb
 
-#Run only spec on line 8 of PostController
+# Run only spec on line 8 of PostController
 $ bundle exec rspec spec/controllers/posts_controller_spec.rb:8
 ```
 If you want to use classes that are defined in your application, don't forget to add `require 'rails_helper'` to each file.
@@ -80,34 +80,34 @@ describe 'Post' do
 end
 ````
 
-#Basic Structure
+# Basic Structure
  To show the basic structure of Rspec with real examples, I created a simple CRUD RoR application with `scaffold` command. You can create the same application by running the code below.
 
 ```console
 $ rails g scaffold Post title:string content:text
 ```
 
-##Describe
+## Describe
  The word `describe` is used to define an `example group` which is the Rspec way of saying a collection of tests. `describe` takes a class name and/or string argument. You can define an `example group` like the code below.
 
 ```Ruby
 describe Post do
-  #tests
+  # tests
 end
 ```
 
-##It
+## It
  The word `it` is another RSpec keyword which is used to define an `example`. An example is basically a test or a test case. You can define an `example` like the code below.
 
 ```Ruby
 describe Post do
   it 'test case' do
-    #test content
+    # test content
   end
 end
 ```
 
-##Expect & to/not_to
+## Expect & to/not_to
  The `expect` keyword is used to define an `expectation` in Rspec.  The `to` keyword is also used as part of `expect` statements. You can also use `not_to` keyword when you want the expectation to be false.
 
 ```Ruby
@@ -121,7 +121,7 @@ end
 
 The `eq` keyword is one of Rspec [matchers](https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) . Each matcher can be used with `expect(..).to` or `expect(..).not_to` to define positive and negative expectations respectively on an object.
 
-#Context
+# Context
  The `context` keyword is just an alias method of `describe` that means there is no functional difference between these two methods. However, there is a contextual difference that makes your tests more understandable by using both of them.
  Generally speaking, `describe` is used to separate sets of tests based on methods or behavior that is being tested, whereas `context` is used to separate specs based on conditions.
 
@@ -130,20 +130,20 @@ The `eq` keyword is one of Rspec [matchers](https://relishapp.com/rspec/rspec-ex
 describe 'Post' do
 
   context 'name == Jim' do
-    #tests
+    # tests
   end
 
   context 'name == John' do
-    #tests
+    # tests
   end
 
 end
 ```
 
-#Matchers
+# Matchers
  We used a matcher `eq` in the above example. Here, I will introduce other types of matchers.
 
-##Equality matchers
+## Equality matchers
  Rspec has several different methods for handling equality.
 
 ```Ruby
@@ -153,14 +153,14 @@ describe 'Post' do
   it 'tests equality matchers' do
     a = 'value'
     b = 'value'
-    expect(a).not_to equal(b) # object identity - a and b refer to the same object
-    expect(a).to eql(b) # object equivalence - a and b have the same value
-    expect(a).to be == b # object equivalence - a and b have the same value with type conversions
+    expect(a).not_to equal(b) #  object identity - a and b refer to the same object
+    expect(a).to eql(b) #  object equivalence - a and b have the same value
+    expect(a).to be == b #  object equivalence - a and b have the same value with type conversions
   end
 end
 ```
 
-##Comparison matchers
+## Comparison matchers
  RSpec provides a number of matchers that are based on Ruby's built-in operators. These can be used for generalized comparison of values. I'll introduce some of many matchers that I frequently use. For further information regarding this topic, check [Relish](https://relishapp.com/rspec/rspec-expectations/v/3-8/docs/built-in-matchers/comparison-matchers).
 
 ```Ruby
@@ -179,7 +179,7 @@ describe 'Post' do
 end
 ```
 
-##Predicate matchers
+## Predicate matchers
  Ruby objects commonly provide predicate methods like `zero?`, `empty?` and `has_key?`.  You can use those methods in Rspec by Simply prefixing the method with `be_` and remove the question mark.
 
 ```Ruby
@@ -197,7 +197,7 @@ describe 'Post' do
 end
 ```
 
-##Type matchers
+## Type matchers
  You can test  the type or class of objects in Rspec by using `be_kind_of()`, `be_instance_of()`.
 
 ```Ruby
@@ -207,18 +207,18 @@ describe 'Post' do
   it 'tests type matchers' do
     str = 'string'
     ins = Post.create(title: 'title', content: 'content')
-    expect(str).to be_kind_of(String) # same as expect(obj).to be_kind_of(type)
-    expect(str).to be_a_kind_of(String) # same as expect(obj).to be_kind_of(type)
-    expect(str).to be_a(String) # same as expect(obj).to be_kind_of(type)
-    expect(str).to be_an(String) # same as expect(obj).to be_kind_of(type)
+    expect(str).to be_kind_of(String) #  same as expect(obj).to be_kind_of(type)
+    expect(str).to be_a_kind_of(String) #  same as expect(obj).to be_kind_of(type)
+    expect(str).to be_a(String) #  same as expect(obj).to be_kind_of(type)
+    expect(str).to be_an(String) #  same as expect(obj).to be_kind_of(type)
 
     expect(ins).to be_instance_of(Post)
-    expect(ins).to be_an_instance_of(Post)  # same as expect(obj).to be_instance_of(type)
+    expect(ins).to be_an_instance_of(Post)  #  same as expect(obj).to be_instance_of(type)
   end
 end
 ```
 
-##Be matchers
+## Be matchers
  There are several related `be matchers`.
 
 ```Ruby
@@ -230,14 +230,14 @@ describe 'Post' do
     obj2 = false
     obj3 = nil
     expect(obj1).to be_truthy
-    expect(obj1).to be #It is the same as be_truthy
+    expect(obj1).to be # It is the same as be_truthy
     expect(obj2).to be_falsey
     expect(obj3).to be_nil
   end
 end
 ```
 
-#Include matchers
+# Include matchers
  You can use the `include matcher` to specify that a collection includes one or more expected objects.
 
 ```Ruby
@@ -261,7 +261,7 @@ describe 'Post' do
 end
 ```
 
-##Expect error
+## Expect error
  Use the `raise_error` matcher to specify that a block of code raises an error.
 
 ```Ruby
@@ -276,7 +276,7 @@ describe 'Post' do
 end
 ```
 
-##Respond_to matchers
+## Respond_to matchers
 Use the `respond_to` matcher to specify details of an object's interface.
 
 ```Ruby

@@ -1,13 +1,11 @@
-#My Journey of Go ④
+# Introduction
+ The concepts and use of `Arrays` and `Slices` have been quite confusing to me since I started learning Go. This is finally time for me to really understand how they work in Go and the differences between these two.
 
-#Introduction
- The concepts and use of 'Arrays` and `Slices` have been quite confusing to me since I started learning Go. This is finally time for me to really understand how they work in Go and the differences between these two.
-
-#Table of contents
+# Table of contents
 1. [Arrays](#arrays)
 - [Slices](#slices)
 
-#Arrays
+# Arrays
  In Go,  an `array` is a numbered sequence of elements of a single type with ==a fixed length==(You can not resize `arrays` in Go). There are several ways to declare an `array` in Go. Here are some examples.
 
 ```go
@@ -22,7 +20,7 @@
 
  In the following code, I'll demonstrate how to declare an `arr` which is composed of 3 strings in the three ways that I presented above.
 
-### ① var name[num]Type
+###  ① var name[num]Type
 
 ```go
 package main
@@ -39,7 +37,7 @@ func main(){
 }
 ```
 
-###② var name[num]Type = [num]Type { ele1, ele2, elen.... }
+### ② var name[num]Type = [num]Type { ele1, ele2, elen.... }
 
 ```go
 package main
@@ -53,7 +51,7 @@ func main(){
 }
 ```
 
-###③ name := [...] Type { ele1, ele2, elen... }
+### ③ name := [...] Type { ele1, ele2, elen... }
 
 ```go
 package main
@@ -67,10 +65,10 @@ func main(){
 }
 ```
 
-#Slices
+# Slices
  In Go, A `slice` is a segment of an array. `Slices` build on `arrays` and provide more power, flexibility, and convenience compared to `arrays`. Just like `arrays`, `Slices` are indexable and have a length. But unlike `arrays`, ==they can be resized==.
 
-###Declaring a Slice
+### Declaring a Slice
  A `Slice` can be declared in the following ways. Unlike declaring an `array`, you don't have to specify the number of elements the `slice` can contain when you define it.
 
 ```go
@@ -86,7 +84,7 @@ func main(){
 ```
  I'll demonstrate how to declare a `slice`  using four ways of defining a `slice` I presented above in the following code.
 
-###① var name[]Type
+### ① var name[]Type
 
 ```go
 package main
@@ -102,7 +100,7 @@ func main() {
 }
 ```
 
-###② var name[]Type = []Type { ele1, ele2, elen.... }
+### ② var name[]Type = []Type { ele1, ele2, elen.... }
 
 ```go
 package main
@@ -116,8 +114,8 @@ func main() {
 }
 ```
 
-###③ name :=  Array[start:end]
- As I stated above, A `slice` is a segment of an `array`. That means we can create a slice from an array.  The table below explains how to control the elements a `slice` which is created from 'Array` contains.
+### ③ name :=  Array[start:end]
+ As I stated above, A `slice` is a segment of an `array`. That means we can create a slice from an array.  The table below explains how to control the elements a `slice` which is created from `Array` contains.
 
 | 操作 | 意味 |
 |:--|:--|
@@ -146,7 +144,7 @@ func main() {
 }
 ```
 
-###④ name := make( []Type, len, cap)
+### ④ name := make( []Type, len, cap)
 
 ```go
 package main
@@ -160,7 +158,7 @@ func main() {
 }
 ```
 
-###Modifying a slice
+### Modifying a slice
  As I mentioned several times, a `slice` is a segment of an `array` and it refers to an underlying array. Therefore, modifying the elements of a `slice` will also modify the corresponding elements in the referenced array.
 
 ```go
@@ -182,7 +180,7 @@ func main(){
 }
 ```
 
-###Length and Capacity of a Slice
+### Length and Capacity of a Slice
  A `slice` has both a `length` and a `capacity`.
 
 - The length of a slice is the number of elements it contains.
@@ -204,7 +202,7 @@ func main(){
 }
 ```
 
-###Appending to a slice
+### Appending to a slice
  It is common to append new elements to a slice, and so Go provides a built-in `append` function. It takes a slice and new elements that you want to append to the `slice`. It then ==returns a new slice== containing all the elements from the given slice as well as the new elements.
 The following code shows the structure of `append` function.
 
@@ -229,7 +227,7 @@ func main(){
 }
 ```
 
-###Nil slices
+### Nil slices
 The zero value of a slice is `nil`. A `nil slice` has a `length` and `capacity` of 0 and has no underlying array.
 
 ```go

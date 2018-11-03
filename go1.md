@@ -1,11 +1,11 @@
 # Table of contents
-1. [What is 'My Journey of Go' for?](# what-is-my-journey-of-go-for)
-- [Packages](# packages)
-- [Exported names](# exported-names)
-- [Functions](# functions)
-- [Variables](# variables)
-- [Short variable declarations](# short-variable-declarations)
-- [Constants](# constants)
+1. [What is 'My Journey of Go' for?](#what-is-my-journey-of-go-for)
+- [Packages](#packages)
+- [Exported names](#exported-names)
+- [Functions](#functions)
+- [Variables](#variables)
+- [Short variable declarations](#short-variable-declarations)
+- [Constants](#constants)
 
 # What is 'My Journey of Go' for?
  `My Journey of Go` is a collection of posts about what I learned from [A Tour of Go](https://tour.golang.org/list) which is a fantastic way for all people to start their journey of Go programming language.

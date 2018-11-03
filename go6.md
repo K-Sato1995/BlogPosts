@@ -1,9 +1,7 @@
-#My Journey of Go ⑥
-
-#Introduction
+# Introduction
  In this post, I'll explain how `interfaces` work in Go.
 
-#Table of contents
+# Table of contents
 1. [Interfaces in Go](#interfaces-in-go)
 - [Basics](#basics)
 - [The empty interface](#the-empty-interface)
@@ -12,10 +10,10 @@
 - [Type switches](#type-switches)
 - [Implementing interfaces](#implementing-interfaces)
 
-#Interfaces in Go
+# Interfaces in Go
  In Go, an `interface` is a set of method signatures. A variavle of interface type can hold any value that implements those methods.
 
-#Basics
+# Basics
  You can declare an `interface` like the following code. It is basically just a list of methods.
 
 ```go
@@ -28,7 +26,7 @@ type NAME_OF_INTERFACE interface {
 ```
  Any type that provides the methods named in an interface is treated as an implementation of that interface. ==No explicit declaration is required.==
 
-#The empty interface
+# The empty interface
  The interface type that does not specify any method is known as the `empty interface`. It can be defined as the following code.
 
 ```go
@@ -54,7 +52,7 @@ func main(){
 }
 ```
 
-#Interface values
+# Interface values
  A `interface value` is represented as a pair of a __concrete value__ and a __dynamic type__.
 
 ```go
@@ -80,7 +78,7 @@ func main(){
 }
 ```
 
-#Type assertions
+# Type assertions
 A `type assertion` provides access to an interface value's underlying concrete value.
 
 ```go
@@ -112,7 +110,7 @@ func main(){
 }
 ```
 
-#Type switches
+# Type switches
  A `type switch` is a construct that permits several type assertions in series.
  You can declare a `type switch` like the following code.
 
@@ -153,7 +151,7 @@ func main() {
 }
 ```
 
-#Implementing interfaces
+# Implementing interfaces
  `Interfaces` can be implemented as methods on structs like the following code.
 
 ```go

@@ -1,13 +1,11 @@
-#My Journey of Go ⑤
-
-#Table of contents
+# Table of contents
 1. [Maps](#maps)
 - [Range](#range)
 
-#Maps
+# Maps
  A `map` is an unordered collection of key-value pairs, where each key is unique. `Maps` in Go are sometimes called `hashes` or `dictionaries` in other programming languages.
 
-###Declaring a map
+### Declaring a map
  You can define a `map` using the following syntax.
 
 ```go
@@ -15,7 +13,7 @@
 ② map[key_type]value_type { key1: value1, key2: value2, ......., keyX: valueX}
 ```
 
-###① make(map[key_type]value_type)
+### ① make(map[key_type]value_type)
   You can initialize a map using the built-in `make()` function. The `make()` function returns a `map` of the given type, initialized and ready for use. `Keys` and corresponding `values`  can be added to a map like the code below.
 
 ```go
@@ -50,7 +48,7 @@ func main() {
 }
 ```
 
-###Nil maps
+### Nil maps
  If you declare a `map` with the `map literal` without initial data, it would generate a `nil-map`. Needless to say, a `nil-map` does not contain any data. Moreover, any attempt to add any data to a `nil-map` causes a runtime error.  
 
 ```go
@@ -68,7 +66,7 @@ func main() {
   nil_map[1] = "GO" //=>  assignment to entry in nil map
 }
 ```
-###Modyfing a map
+### Modyfing a map
  You can add data to a `map` and modify the data of a `map` like the folloing code.
 
 ```go
@@ -94,7 +92,7 @@ func main(){
 }
 ```
 
-###Retrieving values from a map
+### Retrieving values from a map
  You can retrieve the value assigned to a key in a map using the syntax `map[key]`.
 
 ```go
@@ -111,7 +109,7 @@ func main(){
   fmt.Println(map_ex[1]) //=> GO
 ```
 
-###Checking the existence of a key in a map
+### Checking the existence of a key in a map
  When you retrieve the value assigned to a given key using the syntax `map[key]`, it returns an additional boolean value as well. It returns `true` if the key exists in the map and returns `false` if it does not exist in the map.
 
 ```go
@@ -157,7 +155,7 @@ func main(){
 }
 ```
 
-###Deleting a key from a map
+### Deleting a key from a map
 You can delete a key from a map using the built-in `delete(map, key)` function. The `delete()` function does not do anything if the key does not exist in the map.
 
 ```go
@@ -176,10 +174,11 @@ func main(){
 }
 ```
 
-#Range
+# Range
  The `range` keyword is used in `for loop` to iterate over items of an array, slice, channel or map. When you are ranging over an `array` or a `slice`, it returns the index and the element at that index. When you are ranging over a map, it returns the key and the key-value.
 
-###Array
+### Array
+
 ```go
 package main
 
@@ -197,7 +196,7 @@ func main(){
 }
 ```
 
-###Slice
+### Slice
 
 ```go
 package main
@@ -215,7 +214,7 @@ var slice_ex = []string { "Go", "Ruby", "Python" }
 }
 ```
 
-###Map
+### Map
 
 ```go
 package main
@@ -231,10 +230,10 @@ var map_ex = map[string]string{ "Name":"Sam", "Gender":"Male" }
   }
 }
 ```
-###Skipping the index, key or value
+### Skipping the index, key or value
 You can skip the `index` or `value` by assigning to `_`. If you only want the index, drop the `value` entirely.
 
-###Index Only
+### Index Only
 
 ```go
 package main
@@ -254,7 +253,7 @@ func main(){
 ```
 
 
-###Value Only
+### Value Only
 
 ```go
 package main
