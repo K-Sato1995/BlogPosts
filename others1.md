@@ -29,6 +29,8 @@
 - [env](#env)
 - [hostname](#hostname)
 - [last](#last)
+- [curl](#curl)
+- [diff](#diff)
 
 # pwd
 The `pwd` command stands for `Present Working Directory`. It shows what directory you are in. It gives us the absolute path, which means the path that starts from the root (`/`).
@@ -209,15 +211,31 @@ $ last
 ```console
 $ ping [OPTIONS] destination(IP/DN)
 ```
+
 # nslookup
  The `nslookup` command stands for `name server lookup`. It  translates a domain name to an IP address (or vice versa).
- 
+
  ```console
  $ nslookup [OPTIONS] [IP/DN]
  ```
+
 # traceroute
 The `traceroute` command shows the journey that a packet of information undertakes from its source to its destination.
 
 ```console
 $ traceroute [OPTIONS] destination(IP/DN)
+```
+
+# curl
+`curl` is a tool to transfer data from or to a server, using one of the supported protocols (HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE). The command is designed to work without user interaction.
+
+```console
+$ curl [options / URLs]
+```
+
+# diff
+The `diff` command analyzes two files and prints the lines that are different.
+
+```console
+$ diff file1.txt file2.txt
 ```

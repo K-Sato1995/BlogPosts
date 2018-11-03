@@ -1,18 +1,16 @@
-#My Journey of Go ①
+# Table of contents
+1. [What is 'My Journey of Go' for?](# what-is-my-journey-of-go-for)
+- [Packages](# packages)
+- [Exported names](# exported-names)
+- [Functions](# functions)
+- [Variables](# variables)
+- [Short variable declarations](# short-variable-declarations)
+- [Constants](# constants)
 
-#Table of contents
-1. [What is 'My Journey of Go' for?](#what-is-my-journey-of-go-for)
-- [Packages](#packages)
-- [Exported names](#exported-names)
-- [Functions](#functions)
-- [Variables](#variables)
-- [Short variable declarations](#short-variable-declarations)
-- [Constants](#constants)
+# What is 'My Journey of Go' for?
+ `My Journey of Go` is a collection of posts about what I learned from [A Tour of Go](https://tour.golang.org/list) which is a fantastic way for all people to start their journey of Go programming language.
 
-#What is 'My Journey of Go' for?
- `My Journey of Go` is basically a record of what I learned from [A Tour of Go](https://tour.golang.org/list) which is a fantastic place for all people to start their journey of Go programming language.
-
-#Packages
+# Packages
  Every Go program consists of `packages`. Each package needs to be imported first to use its exported identifiers.
  You can import `packages` like the code below.
 
@@ -37,7 +35,7 @@ import "fmt"
 import "math/rand"
 ```
 
-#Exported names
+# Exported names
  In Go, a name is exported if it begins with a capital letter. For instance,  `Pi` is a name that is exported from `'math'` package.
 
 ```go
@@ -50,7 +48,7 @@ func main(){
 }
 ```
 
-#Functions
+# Functions
  A function can take zero or more arguments. You can define a function like the code below.
 
 ```go
@@ -59,7 +57,7 @@ func name_of_the_function(arguments) type {
 }
 ```
 
- Don't forget to write the type of the argument and the return value of the function.
+ Don't forget to write the types of arguments and the return value of a function.
 
 ```go
 package main
@@ -75,7 +73,7 @@ func greetings(name string) string {
 }
 ```
 ### Omission of the type of arguments
-When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
+When there are two or more parameters sharing the same type, you only have to write the type once.
 
 ```go
 package main
@@ -91,7 +89,7 @@ func add(x, y int) int {
 }
 ```
 
-###Multiple results
+### Multiple results
 A function can return any number of results.
 
 ```go
@@ -109,7 +107,7 @@ func multipleArgs(arg1, arg2 string)(string, string) {
 }
 ```
 
-#Variables
+# Variables
  The `var` statement declares a list of variables. As in function argument lists, the type of a variable is written after the name of the variable.  Variables that are declared without an initial value are given their zero value. For instance, `0` is for numeric types, `false` is for the boolean type and `""`(the empty string) is for strings.
 
 ```go
@@ -124,11 +122,11 @@ func main() {
 	fmt.Println(num, var1, var2, var3) //=> 0 false false false
 }
 ```
-As you can see in the code above, A `var` statement can be at package or function level.
+As you can see in the code above, A `var` statement can be used at package or function level.
 
-###Variables with initializers
- A `var` declaration can include initializers, one per variable.
- If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+### Variables with initializers
+ A `var` declaration can include an initializer.
+ If there is an initializer, the type of the variable can be omitted. The variable will take the type of the initializer.
 
 ```go
 package main
@@ -142,7 +140,7 @@ func main() {
 }
 ```
 
-##Short variable declarations
+## Short variable declarations
  You can use `:=` to declare a variable inside a function. Go raises an error if you try to declare a variable with `:=` outside a function.
 
 ```go
@@ -159,7 +157,7 @@ func main() {
 }
 ```
 
-###Basic types
+### Basic types
  Go's basic types are listed in the code below.
 
 ```go
@@ -180,8 +178,8 @@ float32 float64
 complex64 complex128
 ```
 
-###Type conversions
-Since you can not implicitly change the type of a variable in Go, Go raises an error if you try to change the value of a variable like the code below.
+### Type conversions
+ You can not implicitly change the type of a variable in Go. Go raises an error if you try to reassign a value that type is different form the original value type like the code below.
 
 ```go
 var i int = 100
@@ -196,8 +194,8 @@ var b uint8 = uint8(a)
 fmt.Println(b)  // 210
 ```
 
-#Constants
-Constants are declared with the 'const` keyword.
+# Constants
+Constants are declared with the `const` keyword.
 Go supports constants of character, string, boolean, and numeric values.
 __Constants cannot be declared using the `:=` syntax__.
 

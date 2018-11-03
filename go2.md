@@ -1,15 +1,13 @@
-#My Journey of Go ②
+# Overview
+ In this post, I will write about how looping and conditional statements work in Go.
 
-#Overview
- In this post, we will mainly learn how looping and conditional statements work in Go.
+# Table of contents
+1. [For](# for)
+- [If](# if)
+- [Switch](# switch)
+- [Defer](# defer)
 
-#Table of contents
-1. [For](#for)
-- [If](#if)
-- [Switch](#switch)
-- [Defer](#defer)
-
-#For
+# For
  `For` is Go's only looping construct. Basic `for loop` consists of three parts that are listed below.
 
 - `init statement`: It is executed before the first iteration. (It is often used to define a variable that can only be used in the scope of the `for` statement.)
@@ -56,7 +54,7 @@ func main() {
 	for ;num < 100; {
 		num += num
 	}
-	fmt.Println(num) //=> 28
+	fmt.Println(num) //=> 128
 }
 ```
 
@@ -71,8 +69,8 @@ func main() {
 }
 ```
 
-#If
-  The basic syntax of Go's `if` statement is similar to its for` statement.
+# If
+  The basic syntax of Go's `if` statement is similar to its `for` statement.
 
 ```go
 package main
@@ -115,7 +113,7 @@ func main() {
 }
 ```
 
-#Switch
+# Switch
 A `switch` statement is a shorter way to write a sequence of `if - else` statements. A `switch` statement only runs the first case that meets the condition, not all the cases that follow.
 
 ```go
@@ -182,9 +180,9 @@ func main() {
 }
 ```
 
-#Defer
+# Defer
  A `defer` statement defers the execution of a function until the surrounding function returns.
- For instance, `fmt.Println("Hello")` is excuted after `fmt.Println("World") due to the `differ` statement that was given in the example below.
+ For instance, `fmt.Println("Hello")` is excuted after `fmt.Println("World")` due to the `differ` statement that was given in the example below.
 
 ```go
 package main
