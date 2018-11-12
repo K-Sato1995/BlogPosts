@@ -1,9 +1,9 @@
-# Basic Linux Commands
+#Basic Linux Commands
 
-# Introduction
+#Introduction
  I made a list of linux commands that, I think, are important and frequently used. The main purpose of this post is to memorize basic linux commands and make myself more familiar with other commands I don't often use. I would keep adding more commands.
 
-# List of commands
+#List of commands
 
 1. [pwd](#pwd)
 - [ls](#ls)
@@ -31,6 +31,7 @@
 - [last](#last)
 - [curl](#curl)
 - [diff](#diff)
+- [which](#which)
 
 # pwd
 The `pwd` command stands for `Present Working Directory`. It shows what directory you are in. It gives us the absolute path, which means the path that starts from the root (`/`).
@@ -211,14 +212,12 @@ $ last
 ```console
 $ ping [OPTIONS] destination(IP/DN)
 ```
-
 # nslookup
  The `nslookup` command stands for `name server lookup`. It  translates a domain name to an IP address (or vice versa).
 
  ```console
  $ nslookup [OPTIONS] [IP/DN]
  ```
-
 # traceroute
 The `traceroute` command shows the journey that a packet of information undertakes from its source to its destination.
 
@@ -238,4 +237,11 @@ The `diff` command analyzes two files and prints the lines that are different.
 
 ```console
 $ diff file1.txt file2.txt
+```
+
+# which
+The Linux `which` command is used to find the location of a program.
+
+```console
+$ which <programname>
 ```
