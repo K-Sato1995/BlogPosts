@@ -1,16 +1,16 @@
-#Table of contents
+# Table of contents
 1. [Useful gems you can use with Rspec](#useful-gems-you-can-use-with-rspec)
 - [Factory Bot](#factory-bot)
 - [Faker](#faker)
 - [Capybara](#capybara)
 
-#Useful gems you can use with Rspec
+# Useful gems you can use with Rspec
  In this post, I'll introduce 3 extremely useful gems you can use with Rspc. These gems enable you to write better specs and save yourself a lot of time.
 
-#Factory Bot
+# Factory Bot
  You need to define multiple sets of data in order to test all given methods, features and objects. This can be quite tedious and tiring if you have to do it over and over again. This is where [`factory_bot`](https://github.com/thoughtbot/factory_bot) comes in! It allows you to create an object or a collection of objects with predefined sets of values.
 
-###Installation
+### Installation
  To use `factory_bot` in your RoR applications, you have to add [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) to your Gemfile.
 
 ```Ruby
@@ -28,7 +28,7 @@ RSpec.configure do |config|
 end
 ```
 
-###Automatic Factory Definition Loading
+### Automatic Factory Definition Loading
  By default, factory_bot_rails will automatically load factories defined in the following locations, relative to the root of the Rails project. 
 
 ```Ruby
@@ -40,7 +40,7 @@ test/factories/*.rb
 spec/factories/*.rb
 ```
 
-###Defining factories
+### Defining factories
  Each factory has a name and a set of attributes. The name is used to guess the class of the object by default, but you can also explicitly specify it.
 
 ```Ruby
@@ -59,7 +59,7 @@ FactoryBot.define do
 end
 ```
 
-###Using factories
+### Using factories
  `factory_bot` supports several different build strategies: `build`, `create`, `attributes_for` and `build_stubbed`.
 
 ```Ruby
@@ -90,7 +90,7 @@ post.title #=> Javascript
 
 For more information regarding `factory_bot_rails`, you can check [here](https://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md)
 
-#Faker
+# Faker
  The `factory_bot` gem saves you from writing the same code over and over again by providing predefined values. However, manually writing those predefined values can be very daunting if you want to add hundreds or thousands of records to your database. Fortunately, instead of manually writing all the data, you can use `faker` to create fake data.
 
 ###Installation
@@ -100,7 +100,7 @@ For more information regarding `factory_bot_rails`, you can check [here](https:/
 gem `faker`
 ```
 
-###Usage
+### Usage
  Utilizing `faker` is quite simple.
  You can create fake data just like the code below.
 
@@ -114,7 +114,7 @@ Faker::Internet.email #This will create a random email address.
 
  You can create all kinds of data with `faker`. For more types of data, you can check [here](https://github.com/stympy/faker)
 
-###Ensuring unique values
+### Ensuring unique values
  You can specify not to create duplicate values by adding prefix `unique` like the code below.
 
 ```Ruby
@@ -123,10 +123,10 @@ Faker::Name.unique.name #This will create an unique value
 
 For more information regarding this topic, you can check [here](https://github.com/stympy/faker)
 
-#Capybara
+# Capybara
 `Capybara` helps you test web applications by simulating how a real user would interact with your app. 
 
-###Installation
+### Installation
 
  You have to add `capybara` gem to your Gemfile.
 

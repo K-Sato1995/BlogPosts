@@ -1,9 +1,9 @@
-#Basic Linux Commands
+# Basic Linux Commands
 
-#Introduction
+# Introduction
  I made a list of linux commands that, I think, are important and frequently used. The main purpose of this post is to memorize basic linux commands and make myself more familiar with other commands I don't often use. I would keep adding more commands.
 
-#List of commands
+# List of commands
 
 1. [pwd](#pwd)
 - [ls](#ls)

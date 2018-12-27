@@ -1,11 +1,11 @@
-#Table of contents
+# Table of contents
 
 1. [What is a getter method](#what-is-a-getter-method)
 - [What is a setter method](#what-is-a-setter-method)
 - [What are accessors?](#what-are-accessors)
 - [References](#references)
 
-#What is a getter method?
+# What is a getter method?
  __A getter method__ is a method that ==gets== a value of an instance variable.
  Without a getter method, you can not retrieve a value of an instance variable outside the class the instance variable is instantiated from.
 
@@ -41,7 +41,7 @@ obj1 = Movie.new('Forrest Gump')
 p obj1.name #=> "Forrest Gump"
 ```
 
-#What is a setter method?
+# What is a setter method?
  __A setter__ is a method that ==sets== a value of an instance variable.
  Without a setter method, you can not assign a value to an instance variable outside its class.
  if you try to set a value of an instance variable outside its class, Ruby raises  [No Method Error](http://ruby-doc.org/core-2.5.0/NoMethodError.html) just like it does when you try to retrieve a value of an instance variable outside its class without a getter method.
@@ -86,7 +86,7 @@ p obj1.name #=> "Fight Club"
 ```
 By using `name=`, you can now assign a new value `Fight Club` to `obj1`.
 
-#What are accessors?
+# What are accessors?
  `Accessors` are a way to create getter and setter methods without explicitly defining them in a class.
  There are three types fo accessors in Ruby.
 
@@ -148,7 +148,7 @@ p obj1.name #=> "Fight Club"
 p obj1.year #=> 1999
 ```
 
-#References
+# References
 [How getter/setter methods work in Ruby](https://medium.com/@rondwalker22/how-getter-setter-methods-work-in-ruby-c5f5da07f99)
 [What is attr_accessor in Ruby?]
 (https://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
