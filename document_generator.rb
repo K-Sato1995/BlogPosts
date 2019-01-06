@@ -9,7 +9,7 @@ json_data = JSON.parse(response, symbolize_names: true)
 # Make it easier to work with and create README
 posts_array = json_data[:data]
 readme = File.open("README.md", 'w')
-readme.puts "The posts on my [blog](https://k-blog0130.herokuapp.com/en).\n\n"
+readme.puts "# The posts on my [blog](https://k-blog0130.herokuapp.com/en).\n\n"
 readme.puts "# The list of the posts\n\n"
 
 # Iterate and create files
