@@ -125,6 +125,23 @@ $ grep 'word' [filename]
 ```
  The `grep` keyword stands for `Global regular expression print`.
 
+__Options for `grep`__
+
+```
+-c : This prints only a count of the lines that match a pattern
+-h : Display the matched lines, but do not display the filenames.
+-i : Ignores, case for matching
+-l : Displays list of a filenames only.
+-n : Display the matched lines and their line numbers.
+-v : This prints out all the lines that do not matches the pattern
+-e exp : Specifies expression with this option. Can use multiple times.
+-f file : Takes patterns from file, one per line.
+-E : Treats pattern as an extended regular expression (ERE)
+-w : Match whole word
+-o : Print only the matched parts of a matching line,
+ with each such part on a separate output line.
+```
+
 # cat
  The `cat` command displays the contents of a file, printing the entire contents to the screen without interruption.
 
@@ -232,6 +249,7 @@ $ traceroute [OPTIONS] destination(IP/DN)
 ```console
 $ curl [options / URLs]
 ```
+[Great article about this command](https://www.tecmint.com/linux-curl-command-examples/)
 
 # diff
 The `diff` command analyzes two files and prints the lines that are different.
