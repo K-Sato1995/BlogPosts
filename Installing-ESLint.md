@@ -3,11 +3,11 @@ This is just a quick guideline to install `ESLint` in your JS applications.
 
 # Table of contents
 1. [Install packages](#install-packages)
-- [Create your .eslintrc.json file!](#create-your-eslintrc-json-file)
-- [How to use it](#how-to-use-it)
-- [Add shortcut commands ](#add-shortcut-commands)
-- [Integrating ESLint with  Prettier](#integrating-eslint-with-prettier)
-- [If you are also using Codeclimate](#if-you-are-also-using-codeclimate)
+2. [Create your .eslintrc.json file!](#create-your-eslintrc-json-file)
+3. [How to use it](#how-to-use-it)
+4. [Add shortcut commands ](#add-shortcut-commands)
+5. [Integrating ESLint with  Prettier](#integrating-eslint-with-prettier)
+6. [If you are also using Codeclimate](#if-you-are-also-using-codeclimate)
 
 # Install packages
 Follow the steps below and install all the necessary packages.
@@ -78,12 +78,12 @@ $ npm install --save-dev eslint-config-prettier
    }
 }
 ```
-==References==
-[Prettier + ESLint + Facebook Code Quality: The Auto-magical React Styling Tutorial](https://medium.com/@eliotjunior/prettier-eslint-facebook-code-quality-the-auto-magical-react-styling-tutorial-19481acb10dd)
-[Command Line Interface - ESLint - Pluggable JavaScript linter](https://eslint.org/docs/user-guide/command-line-interface#--ext)
-[Running eslint as an npm script results in ELIFECYCLE error. · Issue #2409 · eslint/eslint · GitHub](https://github.com/eslint/eslint/issues/2409)
-[ESLint をグローバルにインストールせずに使う - Qiita](https://qiita.com/mysticatea/items/6bd56ff691d3a1577321)
-[Streamline JavaScript Development with ESLint - NodeSource](https://nodesource.com/blog/streamline-javascript-development-with-eslint/)
+## References
+- [Prettier + ESLint + Facebook Code Quality: The Auto-magical React Styling Tutorial](https://medium.com/@eliotjunior/prettier-eslint-facebook-code-quality-the-auto-magical-react-styling-tutorial-19481acb10dd)
+- [Command Line Interface - ESLint - Pluggable JavaScript linter](https://eslint.org/docs/user-guide/command-line-interface#--ext)
+- [Running eslint as an npm script results in ELIFECYCLE error. · Issue #2409 · eslint/eslint · GitHub](https://github.com/eslint/eslint/issues/2409)
+- [ESLint をグローバルにインストールせずに使う - Qiita](https://qiita.com/mysticatea/items/6bd56ff691d3a1577321)
+- [Streamline JavaScript Development with ESLint - NodeSource](https://nodesource.com/blog/streamline-javascript-development-with-eslint/)
 
 ### If you are also using Codeclimate
 

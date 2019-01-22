@@ -3,6 +3,7 @@
 # The list of the posts
 
 - [Ruby-Getters-and-Setters.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Getters-and-Setters.md)
+- [Rails-Associations(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rails-Associations(日本語).md)
 - [GraphQL-Basics(2).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Basics(2).md)
 - [GraphQL-Basics(1).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Basics(1).md)
 - [Redux-入門-(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Redux-入門-(日本語).md)

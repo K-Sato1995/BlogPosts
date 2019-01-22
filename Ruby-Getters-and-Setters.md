@@ -94,10 +94,10 @@ By using `name=`, you can now assign a new value `Fight Club` to `obj1`.
 - `attr_writer` automatically generates a setter method for each given attribute. 
 - `attr_accessor` automatically generates a getter and setter method for each given attribute.
 
- First, let's take a look at `attr_reader`!
- As you can see in the code below, `name` and `year` are retrieved outside `Movie` class even though there is no getter method for either of them. This is because `attr_reader` generates a getter method for each given attribute.
+First, let's take a look at `attr_reader`!
+As you can see in the code below, `name` and `year` are retrieved outside `Movie` class even though there is no getter method for either of them. This is because `attr_reader` generates a getter method for each given attribute.
 
- ```Ruby
+ ```ruby
 class Movie
   attr_reader :name, :year
 
@@ -111,10 +111,10 @@ p obj1.name #=> Forrest Gump
 p obj1.year #=> 1994
 ```
 
- Second, let's see how `attr_writer` works! 
- As I mentioned above, `attr_witer` generates a setter method for each given attribute. Therefore you can assign new values to `ob1` without explicitly writing setter methods for `name` and `year`!
+Second, let's see how `attr_writer` works! 
+As I mentioned above, `attr_witer` generates a setter method for each given attribute. Therefore you can assign new values to `ob1` without explicitly writing setter methods for `name` and `year`!
 
-```Ruby
+```ruby
 class Movie
   attr_reader :name, :year 
   attr_writer :name, :year

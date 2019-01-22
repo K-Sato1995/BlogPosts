@@ -116,6 +116,17 @@ $ chmod [options] mode file(s)
 ```console
 $ find [option(s)]
 ```
+ex1)
+
+```console
+$ find / -name my.cnf
+```
+
+ex2)
+
+```console
+$ find . -type f -name "name-of-the-file"
+```
 
 # grep
  The `grep` command is used to search text. It searches the given file for lines containing a match to the given strings or words.

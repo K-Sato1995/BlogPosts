@@ -1,6 +1,8 @@
 # Introduction
 In this post, I am going to talk about how to implement `routing` in your react applications with [react-router-dom](https://www.npmjs.com/package/react-router-dom).  I will explain how to implement routing as well as passing data around in your components. (I expect you to have react-development-environment on your computer as a prerequisite.)
 
+![output.gif](https://qiita-image-store.s3.amazonaws.com/0/258219/99114ff7-f968-f469-2912-44a08a0d6af1.gif)
+
 # Table of contents
 1.  [Install react-router-dom](#install-react-router-dom)
 - [Setting up the links](#setting-up-the-links)
