@@ -18,6 +18,7 @@
 - [find](#find)
 - [grep](#grep)
 - [cat](#cat)
+- [vi](#vi)
 - [touch](#touch)
 - [man & --help](#man-help)
 - [echo](#echo)
@@ -159,6 +160,12 @@ __Options for `grep`__
 ```console
 $ cat [option(s)] file(s)
 ```
+# vi
+Edit a file with `vi editor`.
+
+```console
+$ vi file_name
+```
 
 # touch
   The `touch` command is used to create a file.
@@ -243,7 +250,7 @@ $ ping [OPTIONS] destination(IP/DN)
 ```
 # nslookup
  The `nslookup` command stands for `name server lookup`. It  translates a domain name to an IP address (or vice versa).
- 
+
  ```console
  $ nslookup [OPTIONS] [IP/DN]
  ```
@@ -255,7 +262,7 @@ $ traceroute [OPTIONS] destination(IP/DN)
 ```
 
 # curl
-`curl` is a tool to transfer data from or to a server, using one of the supported protocols (HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE). The command is designed to work without user interaction. 
+`curl` is a tool to transfer data from or to a server, using one of the supported protocols (HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE). The command is designed to work without user interaction.
 
 ```console
 $ curl [options / URLs]
