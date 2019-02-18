@@ -1,22 +1,3 @@
-# Table of contents
-
-1. [What is Rspec?](#what-is-rspec)
-- [How to install Rspec on your RoR applications?](#how-to-install-rspec-on-your-ror-applications)
-- [Basic Structure](#basic-structure)
- - [Describe](#describe)
- - [It](#it)
- - [Expect & to/not_to](#expect-to-not_to)
- - [Context](#context)
- - [Matchers](#matchers)
- - [Equality matchers](#equality-matchers)
- - [Comparison matchers](#comparison-matchers)
- - [Predicate matchers](#predicate-matchers)
- - [Type matchers](#type-matchers)
- - [Be matchers](#be-matchers)
- - [Include matchers](#include-matchers)
- - [Expect error](#expect-error)
- - [Respond_to matchers](#respond_to-matchers)
-
 # What is Rspec?
 RSpec is a Behaviour-Driven Development tool for Ruby programmers. `BDD` is an approach to software development that combines Test-Driven Development, Domain Driven Design, and Acceptance Test-Driven Planning. 
 

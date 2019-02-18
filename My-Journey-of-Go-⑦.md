@@ -1,16 +1,6 @@
 # Introduction
  This post is about `goroutines` and `channels`. This is the last post of  `My Journey of Go` and might have been the hardest one to write about since I was not familiar with the concepts at all.
 
-# Table of Contents
-1. [What are Goroutines?](#what-are-goroutines)
-- [How to start a Goroutine](#how-to-start-a-goroutine)
-- [How to check the number of all existing goroutines](#how-to-check-the-number-of-all-existing-goroutines)
-- [Channels](#channels)
-- [How to declare a channel](#how-to-declare-a-channel)
-- [Sending and receiving from a channel](#sending-and-receiving-from-a-channel)
-- [Sends and receives are blocking by default](#sends-and-receives-are-blocking-by-default)
-- [More Resources](#more-resources)
-
 # What are Goroutines?
  A `goroutine` is a lightweight thread managed by the Go runtime.
 

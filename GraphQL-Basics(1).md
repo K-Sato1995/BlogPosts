@@ -2,15 +2,6 @@
 One of the projects that I involved with at work used GraphQl and I spent a decent amount of time learning the basic concept of the tool and how to actually use it in applications. I am writing this post so that I can retain my knowledge of the technology and use it in my personal projects in the future.
 This post will mainly focus on the basic concept of `GraphQL` and how to use it on the front-end of your application.
 
-# Table of contents
-1. [Basic concept](#basic-concept)
-- [Query](#query)
-- [GraphQL is just a query language specification](#graphql-is-just-a-query-language-specification)
-- [Variables](#variables)
-- [Mutations](#mutations)
-- [Introspection](#introspection)
-- [References](#references)
-
 ## Basic concept
 GraphQL allows the client to specify exactly what it needs, avoiding over‐fetching and under‐fetching of data.
 GraphQL has two types of operations which are `Query` and `Mutation`.

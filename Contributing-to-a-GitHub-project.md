@@ -1,11 +1,6 @@
 # Introduction 
  This is a simple guide for beginners to make a Pull Request and contribute to a GitHub project. 
 
-# Table of contents
-1. [Setting up a remote and local environment](#setting-up-a-remote-and-local-environment)
-- [Create a Pull Request](#create-a-pull-request)
-
-
 # Setting up a remote and local environment
  First of all, go to the page of the project you want to contribute to and click the `fork` button which is placed at the upper right corner of the page. This will create a copy of the repository in your own GitHub account. 
  Secondly, you need to create a copy of the project locally on your pc. Go to the page of the project in your account again and get the clone with SSH and run the command below.

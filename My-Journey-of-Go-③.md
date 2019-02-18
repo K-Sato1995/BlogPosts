@@ -1,12 +1,6 @@
 # Overview
  In this post, I'll mainly explain what `pointers` and `structures` are.  `Pointers` and `Structures` can be very hard concepts to grasp for people who previously only learned script languages like `Ruby`, `Python` and so on.
 
-# Table of contents
-1. [Pointers](#pointers)
-- [Structs](#structs)
-- [Methods](#methods)
-- [Type Embedding](#type-embedding)
-
 # Pointers
 
 ### How to declare a pointer

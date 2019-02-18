@@ -1,16 +1,6 @@
 # Introduction
  Some new features were introduced in ES6. I will cover some of the basic features of them in this post. 
 
-# Table of contents
-1. [Variable declaration with const and let](#variable-declaration-with-const-and-let)
-- [The scope of let and const](#the-scope-of-let-and-const)
-- [String Interpolation](#string-interpolation)
-- [Arrow function](#arrow-function)
-- [Default value](#default-value)
-- [Class Expression](#class-expression)
-- [Class Inheritance](#class-inheritance)
-- [Spread Operator](#spread-operator)
-
 # Variable declaration with const and let
  You can use `var`, `let` or `const` to declare a variable.
 

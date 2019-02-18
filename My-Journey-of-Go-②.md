@@ -1,12 +1,6 @@
 # Overview
  In this post, I will write about how looping and conditional statements work in Go.
 
-# Table of contents
-1. [For](#for)
-- [If](#if)
-- [Switch](#switch)
-- [Defer](#defer)
-
 # For
  `For` is Go's only looping construct. Basic `for loop` consists of three parts that are listed below.
 

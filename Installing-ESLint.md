@@ -1,14 +1,6 @@
 # Introduction 
 This is just a quick guideline to install `ESLint` in your JS applications.
 
-# Table of contents
-1. [Install packages](#install-packages)
-2. [Create your .eslintrc.json file!](#create-your-eslintrc-json-file)
-3. [How to use it](#how-to-use-it)
-4. [Add shortcut commands ](#add-shortcut-commands)
-5. [Integrating ESLint with  Prettier](#integrating-eslint-with-prettier)
-6. [If you are also using Codeclimate](#if-you-are-also-using-codeclimate)
-
 # Install packages
 Follow the steps below and install all the necessary packages.
 

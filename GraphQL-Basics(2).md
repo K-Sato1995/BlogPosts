@@ -1,10 +1,6 @@
 # Introduction
  In the [previous post]([K-Blog](https://k-blog0130.herokuapp.com/en/posts/64)) about `GraphQL`, I focused on how to utilize `GraphQl` on the front-side of a web application. In this post, I'll mainly talk about how to use the tool on your back-end(in this case Ruby on Rails). 
  
-# Table of contents
-1. [Basic concepts](#basic-concepts)
-- [GraphQL Ruby](#graphql-ruby)
-
 # Basic concepts
  Let's cover some of the very fundamental concepts of `GraphQL`
 
@@ -18,19 +14,6 @@ The shape of everything composing the schema. Each type has a set of fields whic
 Resolvers are `functions` that the GraphQL server uses to fetch or mutate the data. Each field of your GraphQL types needs a corresponding resolver function.
 
 # [GraphQL Ruby](http://graphql-ruby.org/)
-
-In this section, I will cover things below
-
-- [Installation](#installation)
-- [Queries](#queries)
-- [Query Resolver](#query-resolver)
-- [Mutations](#mutations)
-- [Mutation Create](#mutation-create)
-- [Mutation Updae](#mutation-update)
-- [Mutation Delete](#mutation-delete)
-- [Connection fields(1)](#connection-fields-1)
-- [Connection fields(2)](#connection-fields-2)
-- [Utilizing resolvers directory](#utilizing-resolvers-directory)
 
 ## Installation
 

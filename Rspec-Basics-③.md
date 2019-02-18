@@ -1,9 +1,3 @@
-# Table of contents
-1. [Useful gems you can use with Rspec](#useful-gems-you-can-use-with-rspec)
-- [Factory Bot](#factory-bot)
-- [Faker](#faker)
-- [Capybara](#capybara)
-
 # Useful gems you can use with Rspec
  In this post, I'll introduce 3 extremely useful gems you can use with Rspc. These gems enable you to write better specs and save yourself a lot of time.
 

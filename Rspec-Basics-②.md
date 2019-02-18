@@ -1,12 +1,3 @@
-# Table of contents
-
-1. [Before and After hooks](#before-and-after-hooks)
-- [Let](#let)
-- [Subject](#subject)
- - [Implicitly defined subject](#implicitly-defined-subject)
- - [Explicit subject](#explicit-subject)
- - [One-liner syntax](#one-liner-syntax)
-
 # Before and After hooks
 
  You can specify when to run a set of code by using `hooks`. 

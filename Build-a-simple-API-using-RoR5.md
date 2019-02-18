@@ -1,14 +1,6 @@
 # Overview
  Here is a simple guideline to create a simple API with RoR5. In this post, I'll create a simple blog like application that users can read, create, update and delete posts on.
 
-# Table of contents
-
-1. [Create the application](#create-the-application)
-- [Create the controller and model for Post](#create-the-controller-and-model-for-post)
-- [Set up Routes with namespaces](#set-up-routes-with-namespaces)
-- [Set up the Post controller](#set-up-the-post-controller)
-
-
 # Create the application
  You can make an API-only RoR application by just adding `--api` at the end of `rails new` command.
 

@@ -1,7 +1,3 @@
-# Table of contents
-1. [Maps](#maps)
-- [Range](#range)
-
 # Maps
  A `map` is an unordered collection of key-value pairs, where each key is unique. `Maps` in Go are sometimes called `hashes` or `dictionaries` in other programming languages.
 

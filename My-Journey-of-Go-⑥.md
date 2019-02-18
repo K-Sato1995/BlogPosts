@@ -1,15 +1,6 @@
 # Introduction
  In this post, I'll explain how `interfaces` work in Go.
 
-# Table of contents
-1. [Interfaces in Go](#interfaces-in-go)
-- [Basics](#basics)
-- [The empty interface](#the-empty-interface)
-- [Interface values](#interface-values)
-- [Type assertions](#type-assertions)
-- [Type switches](#type-switches)
-- [Implementing interfaces](#implementing-interfaces)
-
 # Interfaces in Go
  In Go, an `interface` is a set of method signatures. A variavle of interface type can hold any value that implements those methods.
 

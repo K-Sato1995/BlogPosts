@@ -1,10 +1,3 @@
-# Table of contents
-
-1. [What is a getter method](#what-is-a-getter-method)
-- [What is a setter method](#what-is-a-setter-method)
-- [What are accessors?](#what-are-accessors)
-- [References](#references)
-
 # What is a getter method?
  __A getter method__ is a method that ==gets== a value of an instance variable.
  Without a getter method, you can not retrieve a value of an instance variable outside the class the instance variable is instantiated from.

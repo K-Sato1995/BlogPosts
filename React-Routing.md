@@ -3,12 +3,6 @@ In this post, I am going to talk about how to implement `routing` in your react 
 
 ![output.gif](https://qiita-image-store.s3.amazonaws.com/0/258219/99114ff7-f968-f469-2912-44a08a0d6af1.gif)
 
-# Table of contents
-1.  [Install react-router-dom](#install-react-router-dom)
-- [Setting up the links](#setting-up-the-links)
-- [Setting up Router and Route](#setting-up-router-and-route)
-- [Passing data with props](#passing-data-with-props)
-
 # Install react-router-dom
  You can install `react-router-dom` by running the command below.
 

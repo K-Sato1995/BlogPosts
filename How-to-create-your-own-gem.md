@@ -1,13 +1,6 @@
 # Introduction 
  In this post, I am going to demonstrate how to create and publish your own gem.  I'll create and publish a very simple gem called `spell-generator` and I'll install and use it in my other ruby program.
 
-# Table of contents
-1. [Create your first gem](#create-your-first-gem)
-2. [What does a gem consist of?](#what-does-a-gem-consist-of)
-3. [Publish your gem](#publish-your-gem)
-4. [How to use your gem](#how-to-use-your-gem)
-5. [More Resources](#more-resources)
-
 # Create your first gem
  You can generate foundations of your gem by running the command below. It will generate basic files and directories that you need to start developing your gem. It is sort of like running `rails new` command to create a RoR application.
 
@@ -54,7 +47,7 @@ Gem 'spell_generator' was successfully created. For more information on making a
 - `gemspec`:  The information about the gem is listed here. For instance, information like what’s in the gem, who made it, and the version of the gem.
 
 # Let's write some code in your gem
- As I mentioned [above](#what-does-a-gem-consist-of), code for your gem is placed within `lib`. It is the convention to have one Ruby file with the same name as your gem under `lib` since that file gets loaded when `require your_gem` is run.  That file is in charge of setting up your gem's code and API. (If you run `bundle gem` command, this file with the same name as the gem's name will be automatically generated.)
+ As I mentioned [above](#what-does-a-gem-consist-of), code for your gem is placed within `lib`. It is a convention to have one Ruby file with the same name as your gem under `lib` since that file gets loaded when `require your_gem` is run.  That file is in charge of setting up your gem's code and API. (If you run `bundle gem` command, this file with the same name as the gem's name will be automatically generated.)
 
 ```ruby
 #spell_generator/lib/spell_generator.rb
@@ -156,7 +149,7 @@ $ rake build
 $ rake release
 ```
 
-#How to use your gem
+# How to use your published gem
  It is really easy to use your gem once your gem in up and running on github. If you want to use your gem on your rails application, you can add the gem to your `gemfile` and run `bundle install`. 
  If you want to use your gem in another ruby file, install the gem on your console and add the lines below in your file.
 
