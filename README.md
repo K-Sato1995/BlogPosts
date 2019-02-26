@@ -2,13 +2,16 @@
 
 # The list of the posts
 
-- [Ruby-Getters-and-Setters.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Getters-and-Setters.md)
-- [GraphQL-Basics(2).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Basics(2).md)
+- [Ruby-Getters-and-Setters-Explained.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Getters-and-Setters-Explained.md)
+- [GraphQL-Ruby(Class-based-API).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Ruby(Class-based-API).md)
 - [ES6-Basics.md](https://github.com/K-Sato1995/BlogPosts/blob/master/ES6-Basics.md)
+- [ハードウェア(基礎).md](https://github.com/K-Sato1995/BlogPosts/blob/master/ハードウェア(基礎).md)
+- [Network基礎(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Network基礎(日本語).md)
 - [So-far-so-good.md](https://github.com/K-Sato1995/BlogPosts/blob/master/So-far-so-good.md)
 - [Active-Record-Query-Interface(Conditions).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Active-Record-Query-Interface(Conditions).md)
 - [Rails-Associations(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rails-Associations(日本語).md)
-- [GraphQL-Basics(1).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Basics(1).md)
+- [SQL-101.md](https://github.com/K-Sato1995/BlogPosts/blob/master/SQL-101.md)
+- [GraphQL-Basics.md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Basics.md)
 - [Redux-入門-(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/Redux-入門-(日本語).md)
 - [Installing-ESLint.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Installing-ESLint.md)
 - [React-Routing.md](https://github.com/K-Sato1995/BlogPosts/blob/master/React-Routing.md)
