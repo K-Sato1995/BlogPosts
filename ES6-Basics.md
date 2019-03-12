@@ -126,7 +126,7 @@ class Car{
         this.name = name
     }
     
-    displayinfo(name){
+    displayinfo(){
         console.log(this.name)
     }
 }
