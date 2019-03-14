@@ -7,7 +7,7 @@ In this post, I will break down three main `servers` that are used for web-appli
 
 If a web server gets a request to serve a static HTML, CSS of Javascript file, it just returns the requested file.  
 But what happens if a web server gets a request that has to be processed dynamically?   
-That's when an application servers shines. 
+That's when an application server comes in. 
 
 `Nginx` and `Apache` are very well known and widely used `web server softwares`.
 
@@ -18,7 +18,7 @@ That's when an application servers shines.
 It is the server your application is actually run on. An application server is not restricted to HTTP and is able to do a bunch of other stuff.  
 When an application server gets a request from the web server, it tells your application about it and your application dose what it's told to do.
 
-If you are famillier with Ruby on Rails, you have probably heard of  `Unicorn`, `Rainbows`, and `Puma`. They are very widely used application server softwares for rails applications.
+If you are familiar with Ruby on Rails, you have probably heard of  `Unicorn`, `Rainbows`, and `Puma`. They are very widely used application server softwares for rails applications.
 
 ## What is a databse server?
 > A database server is a computer system that provides other computers with services related to accessing and retrieving data from a database.   
