@@ -35,3 +35,13 @@
 - [Rspec-Basics-②.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rspec-Basics-②.md)
 - [Rspec-Basics-①.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rspec-Basics-①.md)
 - [Build-a-simple-API-using-RoR5.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Build-a-simple-API-using-RoR5.md)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome
