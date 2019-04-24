@@ -11,7 +11,7 @@ It provides the point of contact between the server and the client. You have to 
 
 ## Type
 The shape of everything composing the schema.   
-Each type has a set of `fields` which defines the data that the type should return.
+Each type has a set of `fields` which defines the data and the types of each field.
 
 ## Resolver
 Resolvers are `functions` that the GraphQL server uses to execute fetching(`queries`) or mutating(`mutations`) the data.   
@@ -732,7 +732,7 @@ module Types
 end
 ```
 
-## References
+# References
 - [Building a GraphQL Server with Ruby Backend Tutorial](https://www.howtographql.com/graphql-ruby/0-introduction/)
 - [A Guide to GraphQL in Plain English – freeCodeCamp.org](https://medium.freecodecamp.org/a-beginners-guide-to-graphql-60e43b0a41f5)
 - [GraphQL Ruby](http://graphql-ruby.org/)

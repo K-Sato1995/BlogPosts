@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 `Hooks` are a new feature introduced in React16.8.
 I'll try to explain what they are in the following order.
 
