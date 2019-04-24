@@ -29,7 +29,7 @@ name = 'Mike' //=> TypeError: invalid assignment to const `name'
 const name = 'Nick' //=> SyntaxError: redeclaration of let name
 ```
 
-# The scope of let and const 
+# The scope of let and const
  The `let` and `const` statements declare block scope local variables unlike `var`.
 
 
@@ -85,9 +85,10 @@ console.log(`I am ${name}`)//=> I am Mike
 ```
 
 # Arrow function
+`Arrow Function` was introduced in ES6.
 
 __ES5 style function__
-
+ 
 ```javascript
 function greeting(name){
     console.log('Hello' + ' ' + name)
