@@ -4,7 +4,17 @@
   ],
   "imageSize": 100,
   "commit": false,
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "K-Sato1995",
+      "name": "K-Sato",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/32632542?v=4",
+      "profile": "https://github.com/K-Sato1995",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
   "contributorsPerLine": 7,
   "projectName": "BlogPosts",
   "projectOwner": "K-Sato1995",
