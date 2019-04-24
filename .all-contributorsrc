@@ -1,7 +1,13 @@
 {
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
+  "commit": false,
+  "contributors": [],
   "contributorsPerLine": 7,
-  },
-  "contributors": []
+  "projectName": "BlogPosts",
+  "projectOwner": "K-Sato1995",
+  "repoType": "github",
+  "repoHost": "https://github.com"
 }
