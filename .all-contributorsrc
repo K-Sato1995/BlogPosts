@@ -3,6 +3,8 @@
     "README.md"
   ],
   "imageSize": 100,
+  "contributorsPerLine": 7,
+  "contributorTemplate": "<%= avatarBlock %><br /><%= contributions %>",
   "contributors": [
     {
       "login": "K-Sato1995",
@@ -14,7 +16,6 @@
       ]
     }
   ],
-  "contributorsPerLine": 7,
   "projectName": "BlogPosts",
   "projectOwner": "K-Sato1995",
   "repoType": "github",
