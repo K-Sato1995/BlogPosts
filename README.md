@@ -5,6 +5,12 @@
 - [Ruby-Getters-and-Setters-Explained.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Getters-and-Setters-Explained.md)
 - [GraphQL-Ruby(Class-based-API).md](https://github.com/K-Sato1995/BlogPosts/blob/master/GraphQL-Ruby(Class-based-API).md)
 - [ES6-Basics.md](https://github.com/K-Sato1995/BlogPosts/blob/master/ES6-Basics.md)
+- [Ruby-Exception-handling.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Exception-handling.md)
+- [English-vocabulary.md](https://github.com/K-Sato1995/BlogPosts/blob/master/English-vocabulary.md)
+- [システムの構成と方式.md](https://github.com/K-Sato1995/BlogPosts/blob/master/システムの構成と方式.md)
+- [Understanding-Linux-Permissions.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Understanding-Linux-Permissions.md)
+- [Go-Small-Tips.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Go-Small-Tips.md)
+- [Me-and-English.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Me-and-English.md)
 - [Ruby-Refactoring-Guide.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Ruby-Refactoring-Guide.md)
 - [情報の基礎理論(日本語).md](https://github.com/K-Sato1995/BlogPosts/blob/master/情報の基礎理論(日本語).md)
 - [Docker-Resources.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Docker-Resources.md)
@@ -35,6 +41,3 @@
 - [Rspec-Basics-②.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rspec-Basics-②.md)
 - [Rspec-Basics-①.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Rspec-Basics-①.md)
 - [Build-a-simple-API-using-RoR5.md](https://github.com/K-Sato1995/BlogPosts/blob/master/Build-a-simple-API-using-RoR5.md)
-
-# Contributors
-

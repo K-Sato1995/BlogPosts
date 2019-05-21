@@ -112,7 +112,7 @@ def new_yesterday
 end
 ```
 
-# Refactoring approaches I learned from code reviews.
+# Other refactoring approaches
 
 ## Use default values
 
@@ -142,7 +142,7 @@ module TwoFer
 end
 ```
 
-# String#scan() to get the first letter of each word
+## scan() to get the first letter of each word
 
 With `String#scan` and a regex, you can get the first letter of each word. For instance, scan with the regex `/\b\w` will catch `word boundaries` (space, - and more) followed by a word character.
 
@@ -163,7 +163,7 @@ def abbreviate(phrase)
 end
 ```
 
-# Use attr_reader to access instance variables
+## Use attr_reader to access instance variables
 
 [Why I always use attr_reader to access instance variables - ivo's awfully random tech blog](https://ivoanjo.me/blog/2017/09/20/why-i-always-use-attr_reader-to-access-instance-variables/)
 
@@ -193,7 +193,7 @@ class Car
 end
 ```
 
-# String#lines/each_line to split multiline strings.
+## lines or each_line to split multiline strings
 
 Using `String#lines/each_line` is more intention revealing.
 
@@ -213,7 +213,7 @@ def rows(nums)
 end
 ```
 
-# String#chars over String#split
+## chars over split
 
 Using `String#chars` is more intention revealing.
 
@@ -229,7 +229,7 @@ Using `String#chars` is more intention revealing.
 "test".chars
 ```
 
-# Use Emurable#each_with_object
+## each_with_object
 
 Just read this article! Incredibly easy to understand how each_with_object works and what it is good for .
 
@@ -258,7 +258,7 @@ end
 #=> {"value"=>:key, "value2"=>:key2}
 ```
 
-# Instance method in a class method
+## Instance method in a class method
 
 ### Before
 
@@ -290,7 +290,7 @@ class Foo
 end
 ```
 
-# Array#count, Array#all?, Array#any?, Array#none? and Array#one?
+## count all? any? none? and one?
 
 ### Example
 
@@ -312,7 +312,7 @@ end
 'aaas'.chars.one? { |letter| letter == 'a' } #=> false
 ```
 
-# Array#scan to make an array from a string
+## scan to make an array
 
 ### Before
 
@@ -326,7 +326,7 @@ end
 'word'.scan(/[a-z]/)
 ```
 
-# Array#sum for cleaner caliculations
+## sum for cleaner caliculations
 
 ### Before
 
@@ -358,11 +358,11 @@ end
 p score
 ```
 
-# Dynamically call/define methods
+## Dynamically call and define methods
 
 You can dinamically define methods using `Module#define_method` and call methods with `Object#send`
 
-### Module#define_method
+### define_method
 
 ```ruby
 class Klass
@@ -374,7 +374,7 @@ end
 Klass.new.my_method(2) #=> 4
 ```
 
-### Object#send
+### send
 
 ```ruby
 class Klass

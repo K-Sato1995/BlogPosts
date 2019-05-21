@@ -151,3 +151,11 @@ Together they are equivalent to this single line:
 RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME'
 ```
 - [Dockerfile reference (RUN)](https://docs.docker.com/engine/reference/builder/#run)
+
+## Using attach
+
+Use docker attach to attach your terminal’s standard input, output, and error (or any combination of the three) to a running container using the container’s ID or name. 
+
+```
+$ docker attach $(docker-compose ps -q your-service)
+```
