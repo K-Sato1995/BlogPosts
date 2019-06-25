@@ -8,7 +8,7 @@
 $ bundle gem spell_generator
 ```
 
-If you successfully run the command above, it would look like this.
+After running the command above, it would look like this.
 
 ```console
 Creating gem 'spell_generator'...

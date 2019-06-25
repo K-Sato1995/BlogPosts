@@ -333,3 +333,4 @@ The `custom hooks` can be used for other cool stuff, check out the official docu
 
 # Resources
 - [Introducing Hooks – React](https://reactjs.org/docs/hooks-intro.html)
+- [A Complete Guide to useEffect — Overreacted](https://overreacted.io/a-complete-guide-to-useeffect/)
