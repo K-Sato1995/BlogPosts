@@ -4,38 +4,6 @@
 
 I made a list of Linux commands that, I think, are important and frequently used. The main purpose of this post is to memorize basic Linux commands and make myself more familiar with other commands I don't often use. I would keep adding more commands.
 
-# List of commands
-
-- pwd
-- ls
-- cd
-- cp
-- mkdir & rmdir
-- rm
-- mv
-- chown
-- chgrp
-- chmod
-- find
-- grep
-- cat
-- vi
-- touch
-- man & --help
-- echo
-- sudo
-- df
-- du
-- history
-- clear
-- env
-- hostname
-- last
-- curl
-- diff
-- which
-- ifconfig
-
 # pwd
 
 The `pwd` command stands for `Present Working Directory`. It shows what directory you are in. It gives us the absolute path, which means the path that starts from the root (`/`).

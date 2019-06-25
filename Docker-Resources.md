@@ -8,6 +8,7 @@
 
 # Official docker documents
 
+- [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Dockerfile Documentation](https://docs.docker.com/engine/reference/builder/)
 - [Docker CLI Documentation](https://docs.docker.com/engine/reference/run/)
 - [Docker Compose Documentation](https://docs.docker.com/compose/overview/)
@@ -29,9 +30,14 @@
 - `docker attach` – Attaches to a running container
 - `docker commit` – Creates a new image from a container’s changes
 - `docker rmi $(docker images -q)` – Delete all the existing images on your system. (`-f` is the `force` option.)
+-  `docker image rm [OPTIONS] IMAGE [IMAGE...]`  - Delete specific images.
+- `docker prune` - Remove unused data
 
 - [A Guide to Docker Commands with Examples](https://afourtech.com/guide-docker-commands-examples/)
+- [docker system prune](https://docs.docker.com/engine/reference/commandline/system_prune/)
 - [Docker Base Commands](https://docs.docker.com/engine/reference/commandline/docker/)
+- [How To Remove Docker Images, Containers, and Volumes](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
+- [How to remove old and unused Docker images - Stack Overflow](https://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images)
 
 # Docker Compose commands
 
@@ -79,6 +85,7 @@ means you are mapping your **machine’s port 4000** to the **container’s publ
 
 ## docker-compose `volumes`
 
+- [Understanding Volumes in Docker](https://container-solutions.com/understanding-volumes-docker/)
 - [docker-compose.yml の volumes って何してるの？](https://www.nyamucoro.com/entry/2018/08/13/222617)
 - [Docker Volumes and Networks with Compose](https://www.linux.com/learn/docker-volumes-and-networks-compose)
 
@@ -159,3 +166,31 @@ Use docker attach to attach your terminal’s standard input, output, and error 
 ```
 $ docker attach $(docker-compose ps -q your-service)
 ```
+
+## Mount node_modules
+I'll leave an answer I found on StackOverflow here.
+
+> This happens because you have added your worker directory as a volume to your docker-compose.yml, as the volume is not mounted during the build.
+
+> When docker builds the image, the node_modules directory is created within the worker directory, and all the dependencies are installed there. Then on runtime the worker directory from outside docker is mounted into the docker instance (which does not have the installed node_modules), hiding the node_modules you just installed. You can verify this by removing the mounted volume from your docker-compose.yml.
+
+> A workaround is to use a data volume to store all the node_modules, as data volumes copy in the data from the built docker image before the worker directory is mounted. This can be done in the docker-compose.yml like this:
+
+```yml
+redis:
+    image: redis
+worker:
+    build: ./worker
+    command: npm start
+    ports:
+        - "9730:9730"
+    volumes:
+        - worker/:/worker/
+        - /worker/node_modules
+    links:
+        - redis
+```
+
+> I'm not entirely certain whether this imposes any issues for the portability of the image, but as it seems you are primarily using docker to provide a runtime environment, this should not be an issue.
+
+- [node.js - Docker-compose: node_modules not present in a volume after npm install succeeds - Stack Overflow](https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)

@@ -1,7 +1,7 @@
 require 'httparty'
 require 'json'
 
-url = 'https://k-blog0130.herokuapp.com/en/api/v1/posts_list'
+url = 'https://k-blog0130.herokuapp.com/api/v1/posts_list'
 # Get the response
 response = HTTParty.get(url, format: :plain)
 # Make it json

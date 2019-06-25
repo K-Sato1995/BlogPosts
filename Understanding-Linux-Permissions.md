@@ -1,4 +1,4 @@
- # Introduction
+# Introduction
 
  The multi-user capability of Unix-like systems is a feature that is deeply ingrained into the design of the operating system.
 
@@ -11,7 +11,8 @@ You can check the permission settings by using `ls -l`.
 $ ls -l 
 drwxr-xr-x. 13 root  root  1027 Jan  3 12:32 bin/cat
 ```
-Let's explore what `drwxr-xr-x. 13 root  root  1077 Jan  3 12:32 bin/cat` means one by one.
+
+Let's explore what `drwxr-xr-x. 13 root root  1077 Jan  3 12:32 bin/cat` means one by one.
 
 | Command | Meaning |
 |:--|:--|
@@ -25,16 +26,16 @@ Let's explore what `drwxr-xr-x. 13 root  root  1077 Jan  3 12:32 bin/cat` means 
 |bin/cat  |The name of the file/directory|
 
 ## File Type
-|記号|ファイルタイプ|
+|Command |File Type|
 |:--|:--|
 |-  |File|
 |d  |Directory|
 |l   |Symbolic Link|
 
 ## File Mode
-The `r` letter means the user has permission to read the file/directory. The `w` letter the user has permission to write the file/directory. And the `e` letter means the user has permission to execute the file/directory.
+The `r` letter means the user has permission to `read` the file/directory. The `w` letter means the user has permission to `write` the file/directory. And the `x` letter means the user has permission to execute the file/directory.
 
-|記号|意味|
+|Command |Meaning|
 |:--|:--|
 |r|read|
 |w|write|
@@ -52,9 +53,10 @@ Group: r-x
 Users: r-x
 ```
 
-# Change File Mode
+# Change File Modes
 The `chmod` command is used to change the permissions of a file or directory. 
-## Octal Modes
+
+## Octal Mode
 Each permission may be specified with an octal number: `read = 4`; `write = 2`; `execute = 1`; `no permission = 0`.
 
 | Meaning　|Number|
@@ -74,7 +76,7 @@ chmod 754 myfile
 
 ## Symbolic Mode
 
-The blow is the basic syntax of `chmod`.
+The below is the basic syntax of `chmod`.
 
 ```
 % chmod who operator permission filename
@@ -82,14 +84,14 @@ The blow is the basic syntax of `chmod`.
 
 You can use the following commands to change modes.
 
-| 記号 | 意味 |
+| Command | Meaning |
 |:-:|:-:|
 |u(user)   |user access  |
 |g(group)  |group access  |
 |o(other)   |other access|
 |a(all)   |user, group, and other access   |
 
-| 記号 | 意味 |
+| Command | Meaning |
 |:-:|:-:|
 | +  | add specified permissions |
 | - | remove specified permissions  |
@@ -120,3 +122,4 @@ $ chmod g=rwx filec
 # References
 
 - [Learning the shell - Lesson 9: Permissions](http://linuxcommand.org/lc3_lts0090.php)
+

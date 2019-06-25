@@ -421,6 +421,30 @@ Klass.new.ken #=> ken
 klass.new.jack #=> jack
 ```
 
+# Small Tips
+
+## super
+The `super` method calls the parent class method.
+
+```ruby
+class A
+  def test
+    p 'A'
+  end
+end
+
+class B < A
+  def test
+    super
+    p 'B'
+  end
+end
+
+B.new.test #=> A B
+```
+
+- [What is `super` in Ruby? - Stack Overflow](https://stackoverflow.com/questions/31019009/what-is-super-in-ruby)
+
 # References
 
 - [Introduction to Refactoring - RubyGuides](https://www.rubyguides.com/2015/12/ruby-refactoring/)

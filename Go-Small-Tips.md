@@ -112,7 +112,7 @@ func main() {
 }
 ```
 
-You should you a pointer type for a reciver.
+You should you a pointer type for a receiver.
 
 ```go
 
@@ -131,4 +131,45 @@ func main(){
   p.set(1,2)
   fmt.Println(p) //=> {1 2}
 }
+```
+
+# Convert a string into a slice of runes
+
+Converting a string to a slice of runes yields a slice whose elements are the Unicode code points of the string.
+
+```go
+s := "abc日"
+r := []rune(s)
+fmt.Printf("%v\n", r)
+fmt.Printf("%U\n", r)
+
+// Output:
+// [97 98 99 26085]
+// [U+0061 U+0062 U+0063 U+65E5]
+```
+
+# Exception handling
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	result, err := os.Open("/nonexistence.txt")
+
+	if err != nil {
+		fmt.Println("There was an error")
+		fmt.Println(err)
+		return
+		//=> There was an error
+		//=> open /nonexistence.txt: no such file or directory
+	}
+
+	fmt.Println(result)
+}
+
 ```
