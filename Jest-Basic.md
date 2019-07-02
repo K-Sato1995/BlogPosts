@@ -109,7 +109,45 @@ describe('my math module', () => {
   });
 });
 ```
+
+# Test with Enzyme
+`Enzyme` is a JavaScript Testing utility for React that makes it easier to test your React Components' output. 
+
+## Set up
+
+```
+npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
+```
+
+create `src/setupTests.js` file.
+
+```javascript
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
+
+## Shallow()
+
+if you want to test the `<App />` component, you can extend our `App.test.js` file by adding the following.
+The `shallow()` will test the provided component and ignores any child components that may be present in the component tree thereafter. if we had a `<Header />` and `<Footer />` component within `<App />` for example, they would be ignored in this test.
+
+```
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
+
+describe('First React component test with Enzyme', () => {
+   it('renders without crashing', () => {
+      shallow(<App />);
+    });
+});
+```
 # References 
 
 - [jestbasics](http://frantic.im/jestbasics/)
 - [Jest](https://jestjs.io/docs/en/getting-started.html)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [Testing in React with Jest and Enzyme: An Introduction](https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8)
+- [React Unit Testing Using Enzyme and Jest | Toptal](https://www.toptal.com/react/tdd-react-unit-testing-enzyme-jest)

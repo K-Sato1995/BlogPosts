@@ -42,7 +42,7 @@ services:
       - .:/app
       - bundle_path:/bundle # New
     environment:
-      - BUNDLE_PATH=/bundle/vendor #New
+      - BUNDLE_PATH=/bundle #New
     depends_on:
       - postgres
   postgres:
