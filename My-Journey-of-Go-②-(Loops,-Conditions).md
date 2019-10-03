@@ -45,7 +45,7 @@ import "fmt"
 
 func main() {
 	num := 1
-	for ;num < 100; {
+	for num < 100 {
 		num += num
 	}
 	fmt.Println(num) //=> 128
@@ -94,11 +94,11 @@ package main
 import "fmt"
 
 func condition(arg string) string {
-  if v:= "Go"; arg == v {
-    return "This is Go"
-  } else {
-    return "This is not Go"
-  }
+	if v := "Go"; arg == v {
+		return "This is Go"
+	} else {
+		return "This is not Go"
+	}
 }
 
 func main() {

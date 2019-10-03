@@ -50,7 +50,7 @@ class Profile < ApplicationRecord
 end
 ```
 
-### One-to-Oneで頻繁に使用されるメソッド
+### One to Oneで頻繁に使用されるメソッド
 
 ```ruby
 user.profile :該当ユーザーのプロファイル情報を取得
@@ -58,7 +58,7 @@ user.build_profile :該当ユーザーのプロファイルを作成(DBに保存
 user.create_profile :該当ユーザーのプロファイルを作成(DBに保存する)
 ```
 
-# One-to-Many
+# One to Many
 
 `One-to-Many`は他のモデルとの間に「１対多」の関係がある事を示す。  
 モデルAの１つのレコードが０個以上のモデルBのインスタンスを所有している。
@@ -103,7 +103,7 @@ class Post < ApplicationRecord
 end
 ```
 
-### One-to-Manyで頻繁に使用されるメソッド
+### One to Manyで頻繁に使用されるメソッド
 
 ```ruby
 user.posts :該当ユーザーの全ての投稿を取得。
@@ -177,7 +177,7 @@ class Tagging < ApplicationRecord
 end
 ```
 
-### Many-to-Many(has_many_through)で頻繁に使用されるメソッド
+### Many to Many(has_many_through)で頻繁に使用されるメソッド
 
 ```ruby
 post.tags :該当投稿の全てのタグを取得。
@@ -194,7 +194,7 @@ tag.posts.build({}) :該当タグと結合モデル(tagging)で結びつく投�
 tag.posts.create({}) :該当タグと結合モデル(tagging)で結びつく投稿を作成する。(DBに保存する)
 ```
 
-# Many-to-Many(has_and_belongs_to_many)
+# Many to Many(has_and_belongs_to_many)
 `Many-to-Many`は他のモデルとの間に「多対多」の関係がある事を示す。  
 モデルAとモデルB共に相互の複数のインスタンスを所有している。  
 `has_and_belongs_to_many`の方式では１つのJOINテーブルを介してモデルAとモデルBが互いのインスタンスを多数所有し合う。。
@@ -349,3 +349,4 @@ user.pictures << picture.new({}) :該当ユーザーにコメントを関連づ�
 - [Everything There Is to Know About Associations in Rails - DEV Community 👩‍💻👨‍💻](https://dev.to/neshaz/everything-there-is-to-know-about-associations-in-rails-52ii)
 - [Brush up Your Knowledge of Rails Associations — SitePoint](https://www.sitepoint.com/brush-up-your-knowledge-of-rails-associations/)
 - [Active Record Associations — Ruby on Rails Guides](https://guides.rubyonrails.org/association_basics.html)
+- [Using build with a has_one association in rails - Stack Overflow](https://stackoverflow.com/questions/2472982/using-build-with-a-has-one-association-in-rails)

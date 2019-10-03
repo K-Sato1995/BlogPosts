@@ -57,7 +57,7 @@ $ ./node_modules/.bin/eslint --fix yourfile.js
 // Each Folder
 $ ./node_modules/.bin/eslint --fix src/actions/
 ```
-### If you are also using Codeclimate
+## If you are also using Codeclimate
 
 ```console
 $ touch .codeclimate.yml
@@ -70,10 +70,10 @@ eslint:
   config:
     config: /vfhd-development-kit/projects/vf_helpdesk_frontend/.eslintrc.json
 ```
-##### References
+#### References
 - [Code Climate for ESLint](https://docs.codeclimate.com/docs/eslint)
 
-## References
+# References
 - [Integrating with ESLint · Prettier](https://prettier.io/docs/en/eslint.html)
 - [ESLint で ES6で書かれたReact のコードを検証する - Qiita](https://qiita.com/kjugk/items/b9dfc876e16dbfa4f447#eslint-plugin-react-%E3%81%AE-recommened-rulues-%E3%82%92%E9%81%A9%E7%94%A8%E3%81%99%E3%82%8B)
 - [ESLintの推奨設定（eslint:recommended）のチェック内容 ｜ Tips Note by TAM](https://www.tam-tam.co.jp/tipsnote/javascript/post11934.html)

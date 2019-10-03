@@ -421,6 +421,25 @@ Klass.new.ken #=> ken
 klass.new.jack #=> jack
 ```
 
+## Tap
+
+### Before
+
+```ruby
+user = User.new
+user.username = "kartik"
+user.save!
+```
+
+### After
+
+```ruby
+user = User.new.tap do |u|
+  u.username = "kartik"
+  u.save!
+end
+```
+
 # Small Tips
 
 ## super

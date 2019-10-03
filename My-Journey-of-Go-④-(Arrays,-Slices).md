@@ -65,7 +65,7 @@ func main(){
  In Go, A `slice` is a segment of an array. `Slices` build on `arrays` and provide more power, flexibility, and convenience compared to `arrays`. Just like `arrays`, `Slices` are indexable and have a length. But unlike `arrays`, they can be resized.
 
 ### Declaring a Slice
- A `Slice` can be declared in the following ways. Unlike declaring an `array`, you don't have to specify the number of elements the `slice` can contain when you define it.
+ A `Slice` can be declared in the following ways. Unlike declaring an `array`, you don't have to specify the number of elements the `slice` can contain.
 
 ```go
 ① var name[]Type
@@ -78,7 +78,7 @@ func main(){
 //Array: An array.
 //make: The built-in make function.
 ```
- I'll demonstrate how to declare a `slice`  using four ways of defining a `slice` I presented above in the following code.
+ In the following code, I'll demonstrate how to declare a `slice`  using the four different ways of defining a `slice` I presented above.
 
 ### ① var name[]Type
 
@@ -111,7 +111,7 @@ func main() {
 ```
 
 ### ③ name :=  Array[start:end]
- As I stated above, A `slice` is a segment of an `array`. That means we can create a slice from an array.  The table below explains how to control the elements a `slice` which is created from `Array` contains.
+ As I stated above, A `slice` is a segment of an `array`. That means we can create a slice from an array.  The table below explains how to control the elements a `slice` which is created from an array called `Array`.
 
 | 操作 | 意味 |
 |:--|:--|

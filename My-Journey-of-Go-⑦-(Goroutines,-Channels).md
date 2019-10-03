@@ -29,8 +29,11 @@ func main() {
 ```
 
  The code above only outputs `main function`. This is due to the following reasons.  
+
  Firstly, when a new `goroutine` starts running, the goroutine call returns immediately. It does not wait for the goroutine to finish executing.  
+
  Secondly, the `main Goroutine` should be running for any other `goroutines` to run. If the `main goroutine` terminates, the program will be terminated and no other `goroutine` will run.  
+
  Now you understand why it didn't output `Hello World`. In the code, after calling `go hello()`, the control returned immediately to the next line of code which is `fmt.Println("main function")` without waiting for the `hello goroutine` to finish.
 
  You can execute `hello()` by giving it enough time to run before the `main goroutine` terminates.

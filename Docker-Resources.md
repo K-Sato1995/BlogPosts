@@ -29,7 +29,7 @@
 - `docker search` – Searches the Docker Hub for images
 - `docker attach` – Attaches to a running container
 - `docker commit` – Creates a new image from a container’s changes
-- `docker rmi $(docker images -q)` – Delete all the existing images on your system. (`-f` is the `force` option.)
+- `docker rmi -f $(docker images -q)` – Delete all the existing images on your system. (`-f` is the `force` option.)
 -  `docker image rm [OPTIONS] IMAGE [IMAGE...]`  - Delete specific images.
 - `docker prune` - Remove unused data
 
@@ -194,3 +194,14 @@ worker:
 > I'm not entirely certain whether this imposes any issues for the portability of the image, but as it seems you are primarily using docker to provide a runtime environment, this should not be an issue.
 
 - [node.js - Docker-compose: node_modules not present in a volume after npm install succeeds - Stack Overflow](https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)
+
+## Execute shell commands in containers
+
+```
+// Show the existing containers
+$ docker-compose ps 
+
+// Execute the command the below with the container's name you want to run the shell commands in.
+$ docker exec -i -t CONTAINER_NAME /bin/sh
+
+```
