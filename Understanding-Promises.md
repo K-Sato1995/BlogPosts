@@ -1,5 +1,38 @@
-# Promise
+# What is a promise?
+A `promise` is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
 
+# How to use it
+`new Promise` creates a promise object with a function that gets executed right after the promise object is called with `then`, `catch` or `finally`.
+You can, for instance, pass a function that fetches data from a server to `new Promise` and use the created promise object to call other functions with the data you fetched.
+The function that is passed to `new Promise` should call `resolve` or `reject` to indicate the state of the promise object.
+
+```js
+const DATA = { name: "K-Sato", age: 24 };
+      
+let promise = new Promise(function(resolve, reject) {
+   setTimeout(() => resolve(DATA), 1000);
+})
+
+promise.then(result => 
+  console.log(result)
+)
+```
+
+Just changed the name of the promise object.
+
+```js
+const DATA = { name: "K-Sato", age: 24 };
+      
+let dataFetch = new Promise(function(resolve, reject) {
+   setTimeout(() => resolve(DATA), 1000);
+})
+
+dataFetch.then(result => 
+  console.log(result)
+)
+```
+
+## Properties
 The resulting promise object has internal properties:
 
 - `state` — initially “pending”, then changes to either “fulfilled” or “rejected”,
@@ -14,10 +47,12 @@ When the executor finishes the job, it should call one of the functions that it 
    - sets state to "rejected",
    - sets result to error.
 
-To summarize, the executor should do a job (something that takes time usually) and then call resolve or reject to change the state of the corresponding Promise object.
+The function passed to `new Promise` is called the executor. When the promise is created, this executor function runs automatically.
+The executor should do a job (something that takes time usually) and then call resolve or reject to change the state of the corresponding Promise object.
 
 ```javascript
 let promise = new Promise(function(resolve, reject){
+      // the function is executed automatically when the promise is constructed
      // executor
     setTimeout(() => resolve("done"), 1000);
 })
@@ -115,3 +150,7 @@ That’s very convenient because `finally` is not meant to process a `promise` r
 We’ll talk more about promise chaining and result-passing between handlers in the next chapter.
 
 
+# References
+-  [Promise](https://javascript.info/promise-basics)
+- [Master the JavaScript Interview: What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
+- [Async/await](https://javascript.info/async-await)

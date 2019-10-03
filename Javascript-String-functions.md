@@ -69,6 +69,13 @@ let s2 = string.slice(0, 3); ///=> str
 console.log(s2);
 ```
 
+## substring()
+Extracts a part of a string and returns a new string.
+
+```JS
+let s2 = string.substring(0, 3); ///=> str
+console.log(s2);
+```
 # Transforming a string
 
 ## split()

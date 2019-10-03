@@ -110,6 +110,50 @@ describe('my math module', () => {
 });
 ```
 
+# Create mock functions
+
+`jest.fn` creates a mock function.
+
+```
+const add = jest.fn() //=> returns an empty function 
+
+const num = jest.fn(() => 3) //=> returns 3
+```
+# Jest commands
+
+## Run one file
+
+```
+$ ./node_modules/.bin/jest --watch
+```
+
+press `p` and put the file.
+
+```
+src/components/__tests__/main/index.js
+```
+
+- [javascript - Run only ONE test with Jest - Stack Overflow](https://stackoverflow.com/questions/44446626/run-only-one-test-with-jest)
+
+
+## Run all tests
+
+```
+$ ./node_modules/.bin/jest
+```
+
+## Create Coverage Report 
+
+```
+$ ./node_modules/.bin/jest --coverage
+```
+
+## Display individual test results
+
+```
+$ ./node_modules/.bin/jest --verbose 
+```
+
 # Test with Enzyme
 `Enzyme` is a JavaScript Testing utility for React that makes it easier to test your React Components' output. 
 
@@ -119,13 +163,30 @@ describe('my math module', () => {
 npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
 ```
 
-create `src/setupTests.js` file.
+create `src/setupTests.js` file. 
+If you don't create this file, you have to define the code below in each test file.
 
 ```javascript
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
+```
+
+You also have to create `.babelrc` and paste the code below.
+
+```
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": "commonjs"
+      }
+    ],
+    "@babel/preset-react"
+  ]
+}
 ```
 
 ## Shallow()
@@ -144,10 +205,104 @@ describe('First React component test with Enzyme', () => {
     });
 });
 ```
-# References 
 
+## Find nodes
+
+You can find a class called `headerComponet` from shallow copied `Header` like the code below.
+
+```
+describe("Header Component", () => {
+  it("should render without errors", () => {
+    const component = shallow(<Header />);
+    const wrapper = component.find(".headerComponent");
+
+    expect(wrapper.length).toBe(1);
+  });
+});
+```
+
+## Debug components
+
+You can use `debug()` like the code below.
+
+```
+configure({ adapter: new Adapter() });
+
+describe("It should render without errors", () => {
+  it("should render without errors", () => {
+    const component = shallow(<Header />);
+    const wrapper = component.find(".headerComponent");
+
+    console.log(component.debug());
+  });
+});
+```
+
+The output would be something like this.
+
+```
+<header className="headerComponent">
+     <h1>
+        Header!!
+     </h1>
+</header>
+```
+
+## beforeEach and setUp function
+
+The code below is referenced from [here](https://github.com/K-Sato1995/jest-react-practice/blob/master/src/components/__tests__/Footer/index.js)
+```
+import React from "react";
+import { shallow } from "enzyme";
+import Footer from "../../Footer";
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+configure({ adapter: new Adapter() });
+
+// props = {} means that the empty {} would be passed to props if nothing is passed to props.
+
+const setUp = (props = {}) => {
+  const component = shallow(<Footer {...props} />);
+  return component;
+};
+
+describe("Footer Component", () => {
+  let component;
+
+  beforeEach(() => {
+    component = setUp();
+  });
+
+  it("should render without errors", () => {
+    const wrapper = component.find(".footerComponent");
+    expect(wrapper.length).toBe(1);
+  });
+});
+```
+
+## Simulate events 
+
+You can simulate events using `simulate` like the code below.
+
+```
+describe("Button Component", () => {
+  it("should simulate click event", () => {
+    const component = setUp();
+    expect(component.find(".click-0").length).toBe(0);
+    // simulate click event and increment the number!!!
+    component.find("a").simulate("click");
+    expect(component.find(".clicks-1").length).toBe(1);
+  });
+});
+```
+More about this topic, check [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html).
+
+# References 
+- [jest + React test example created by me](https://github.com/K-Sato1995/jest-react-practice)
 - [jestbasics](http://frantic.im/jestbasics/)
 - [Jest](https://jestjs.io/docs/en/getting-started.html)
 - [Enzyme](https://airbnb.io/enzyme/)
 - [Testing in React with Jest and Enzyme: An Introduction](https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8)
 - [React Unit Testing Using Enzyme and Jest | Toptal](https://www.toptal.com/react/tdd-react-unit-testing-enzyme-jest)
+- [Jest + React Video turtorial](https://www.youtube.com/watch?v=tYMLXpOJtng)

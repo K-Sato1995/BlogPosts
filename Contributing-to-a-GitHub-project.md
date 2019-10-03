@@ -23,7 +23,8 @@ $ git remote add upstream git@github.com:AccountName/NameOfTheProject.git
 
 ```
 $ git checkout master
-$ git pull upstream master && git push origin master ## Pull from the original project's repository and push it to the clone on your account.
+// Pull from the original project's repository and push it to the clone on your account.
+$ git pull upstream master && git push origin master
 $ git checkout -b NameOfNewBranch
 ```
 
@@ -66,7 +67,8 @@ For instance, if you want to create a new branch from the master branch for your
 
 ```console
 $ git checkout master
-$ git pull upstream master && git push origin master ## Pull from the original project's repository and push it to the clone on your account.
+// Pull from the original project's repository and push it to the clone on your account.
+$ git pull upstream master && git push origin master
 $ git checkout -b NameOfNewBranch
 ```
 

@@ -8,17 +8,16 @@ response = HTTParty.get(url, format: :plain)
 json_data = JSON.parse(response, symbolize_names: true)
 
 # Make it easier to work with and create README
-posts_array = json_data[:data]
+data = json_data[:data]
 readme = File.open('README.md', 'w')
 readme.puts "# The posts on my [blog](https://k-sato1995.github.io/MyBlogFront/#/).\n\n"
 readme.puts "# The list of the posts\n\n"
 
 # Iterate and create files
-posts_array.each do |post|
-  p post
+data[:posts].each do |post|
   f = File.open("#{post[:title].split(' ').join('-')}.md", 'w')
   readme.puts "- [#{post[:title].split(' ').join('-')}.md](https://github.com/K-Sato1995/BlogPosts/blob/master/#{post[:title].split(' ').join('-')}.md)"
-  f.puts post[:context].to_s
+  f.puts post[:content].to_s
 end
 
 # Close README

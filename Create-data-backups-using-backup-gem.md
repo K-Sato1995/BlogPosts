@@ -70,6 +70,12 @@ $ backup perform --trigger my_backup
 ```
 When completed, you will find your backup in the `Storage` path you specified. 
 
+You can also specify a config file like the code below.
+
+```
+backup perform --trigger db_backup --config-file './config.rb'
+```
+
 # References 
 - [Overview · Backup Documentation](http://backup.github.io/backup/v4/)
 - [Hourly Production Server Database And File Backups | GoRails](https://gorails.com/guides/hourly-production-server-database-and-file-backups)
@@ -77,8 +83,3 @@ When completed, you will find your backup in the `Storage` path you specified.
 - [Backup a Rails Database with the Backup and Whenever Gems - Vladi Gleba](http://vladigleba.com/blog/2014/06/30/backup-a-rails-database-with-the-backup-and-whenever-gems/)
 - [Create backups in the project directory](https://github.com/brewbit/brewbit.com/tree/master/backup)
 - [Backup complains about missing dependency even though it is installed · Issue #420 · backup/backup · GitHub](https://github.com/backup/backup/issues/420)
-
-
-```
-backup perform --trigger db_backup --config-file './config.rb'
-```

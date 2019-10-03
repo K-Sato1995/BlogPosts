@@ -17,11 +17,11 @@ Each type has a set of `fields` which defines the data and the types of each fie
 Resolvers are `functions` that the GraphQL server uses to execute fetching(`queries`) or mutating(`mutations`) the data.   
 Each field of your GraphQL types needs a corresponding resolver function.
 
-For more information about the basic concepts of GraphQL,  Check the [official guide](https://graphql.org/learn/queries/) .  
+For more information about the basic concepts of GraphQL,  Check the [official guide](https://graphql.org/learn/queries/).  
 
 # GraphQL with Ruby on Rails
 In this section, I'll walk you through how to use GraphQL in your rails applications using [GraphQL Ruby](http://graphql-ruby.org/).  
-We will create a very simple api which users can get, create, update, delete posts.    
+We will create a very simple api which users can get, create, update and delete posts.    
 You can check the source code [here](https://github.com/K-Sato1995/GraphqlApi)
 
 ## Installation

@@ -27,7 +27,7 @@ func main() {
   map1[2] = "Ruby"
   fmt.Println(map1) //=> map[1:Go 2:Ruby]
 }
-````
+```
 
 ### ② map[key_type]value_type { key1: value1, key2: value2, ......., keyX: valueX}  
   By using the `map literal`, you can initialize a `map` with some initial data.
